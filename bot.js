@@ -51,10 +51,10 @@ client.on("message", async message => {
   if (command === "kill") {
     const who = message.author.id;
     if (who === '364940154927972353') {
-      message.channel.send("daddy! no! </3");
+      message.channel.send("</3");
     }
     else {
-      message.channel.send("but i love you </3");
+      message.channel.send("but love is the way </3");
     };
   };
 
