@@ -67,25 +67,23 @@ client.on("message", async message => {
     const hours = d.getHours();
     const hour = hours +11;
     const added_day = days;
-    message.channel.send(hour);
     if (hour > 23) {
       hour = 0;
       added_day = days + 1;
     };
-    message.channel.send(hour);
     if (hour >= 15 && days < 7) {
       day = days + 1;
     };
     if (hour >= 15 && days === 7) {
       day = 1;
     };
-    message.channel.send(day);
     const who = message.author.id;
     /*    YEHYA A.    364940154927972353    */
     /*    DORVAN J.    246558516553187328    */
     /*    BRYAN G.    360035848902934538    */
 
-    if (day === '1') {
+    const day = 1;
+    if (day === 1) {
       if (who === '364940154927972353') {
         message.channel.send("REL/MM3/ENG/ENG/SP1"); //yehya
       };
@@ -96,7 +94,7 @@ client.on("message", async message => {
         message.channel.send("VSC/REL/ENG/ENG/CMP"); //bryan
       };
     }
-    else if (day === '2') {
+    else if (day === 2) {
       if (who === '364940154927972353') {
         message.channel.send("REL/REL/PHS/PHS/CHM"); //yehya
       };
@@ -107,7 +105,7 @@ client.on("message", async message => {
         message.channel.send("VSC/VSC/PHS/PHS/GMA"); //bryan
       };
     }
-    else if (day === '3') {
+    else if (day === 3) {
       if (who === '364940154927972353') {
         message.channel.send("SP1/SP1/PHS/CHM/REL"); //yehya
       };
@@ -118,7 +116,7 @@ client.on("message", async message => {
         message.channel.send("CMP/CMP/PHS/GMA/VSC"); //bryan
       };
     }
-    else if (day === '4') {
+    else if (day === 4) {
       if (who === '364940154927972353') {
         message.channel.send("SP1/ENG/MM3/CHM/CHM"); //yehya
       };
@@ -129,7 +127,7 @@ client.on("message", async message => {
         message.channel.send("CMP/ENG/REL/GMA/GMA"); //bryan
       };
     }
-    else if (day === '5') {
+    else if (day === 5) {
       if (who === '364940154927972353') {
         message.channel.send("MM3/MM3/ASS/ENG/PHS"); //yehya
       };
