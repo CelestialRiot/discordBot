@@ -23,6 +23,12 @@ client.on("message", async message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
+  if (command === "say") {
+    const sayMessage = args.join(" ");
+    message.delete();
+    message.channel.send(sayMessage);
+  };
+
   if(command === "ping") {
     const m = await message.channel.send("Ping?");
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
@@ -45,12 +51,6 @@ client.on("message", async message => {
 
   if (command === "thank" || command === "thanks") {
     message.channel.send("you're welcome :3");
-  };
-
-  if (command === "say") {
-    message.delete().catch(O_o=>{});
-    const sayMessage = args.join(" ");
-    message.channel.send(sayMessage);
   };
 
   if (command === "iloveyoutoo") {
