@@ -170,122 +170,169 @@ client.on("message", async message => {
     else if (day === "wednesday") {
       message.channel.send("CMP/CMP/PHS/GMA/REL");
     }
-
+    else if (day === "thursday") {
       message.channel.send("CMP/BSM/ENG/GMA/GMA");
-
+    }
+    else if (day === "friday") {
       message.channel.send("ENG/ENG/ASS/BMA/PHS");
-
+    }
+    else {
+      message.channel.send("give your name and a day (eg. rob tuesday)")
+    };
   };
 
   /*  ZEIN W. */
   if (command === "zeus") {
-    message.channel.send("HLT/REL/ENG/ENG/CMP");
-    message.channel.send("HLT/HLT/PHS/PHS/GMA");
-    message.channel.send("CMP/CMP/PHS/GMA/HLT");
-    message.channel.send("CMP/ENG/REL/GMA/GMA");
-    message.channel.send("REL/REL/ASS/ENG/PHS");
+    if (day === "monday") {
+      message.channel.send("HLT/REL/ENG/ENG/CMP");
+    }
+    else if (day === "tuesday") {
+      message.channel.send("HLT/HLT/PHS/PHS/GMA");
+    }
+    else if (day === "wednesday") {
+      message.channel.send("CMP/CMP/PHS/GMA/HLT");
+    }
+    else if (day === "thursday") {
+      message.channel.send("CMP/ENG/REL/GMA/GMA");
+    }
+    else if (day === "friday") {
+      message.channel.send("REL/REL/ASS/ENG/PHS");
+    }
+    else {
+      message.channel.send("give your name and a day (eg. rob tuesday)")
+    };
   };
 
   /*  BRYAN G.  */
-  if (command === "bryan_monday") {
+  if (command === "bryan") {
+    if (day === "monday") {
     message.channel.send("VSC/REL/ENG/ENG/CMP");
-  };
-  if (command === "bryan_tuesday") {
-    message.channel.send("VSC/VSC/PHS/PHS/GMA");
-  };
-  if (command === "bryan_wednesday") {
-    message.channel.send("CMP/CMP/PHS/GMA/VSC");
-  };
-  if (command === "bryan_thurday") {
-    message.channel.send("CMP/ENG/REL/GMA/GMA");
-  };
-  if (command === "bryan_friday") {
-    message.channel.send("REL/REL/ASS/ENG/PHS");
+    }
+    else if (day === "tuesday") {
+      message.channel.send("VSC/VSC/PHS/PHS/GMA");
+    }
+    else if (day === "wednesday") {
+      message.channel.send("CMP/CMP/PHS/GMA/VSC");
+    }
+    else if (day === "thursday") {
+      message.channel.send("CMP/ENG/REL/GMA/GMA");
+    }
+    else if (day === "friday") {
+      message.channel.send("REL/REL/ASS/ENG/PHS");
+    }
+    else {
+      message.channel.send("give your name and a day (eg. rob tuesday)")
+    };
   };
 
   /*  HASSAN M. */
-  if (command === "huss_monday") {
-    message.channel.send("VSC/REL/ENG/ENG/CMP");
-  };
-  if (command === "bryan_tuesday") {
-    message.channel.send("VSC/VSC/PHS/PHS/GMA");
-  };
-  if (command === "bryan_wednesday") {
-    message.channel.send("CMP/CMP/PHS/GMA/VSC");
-  };
-  if (command === "bryan_thurday") {
-    message.channel.send("CMP/ENG/REL/GMA/GMA");
-  };
-  if (command === "bryan_friday") {
-    message.channel.send("REL/REL/ASS/ENG/PHS");
+  if (command === "huss") {
+    if (day === "monday") {
+      message.channel.send("VSC/REL/ENG/ENG/CMP");
+    }
+    else if (day === "tuesday") {
+      message.channel.send("VSC/VSC/PHS/PHS/GMA");
+    }
+    else if (day === "wednesday") {
+      message.channel.send("CMP/CMP/PHS/GMA/VSC");
+    }
+    else if (day === "thursday") {
+      message.channel.send("CMP/ENG/REL/GMA/GMA");
+    }
+    else if (day === "friday") {
+      message.channel.send("REL/REL/ASS/ENG/PHS");
+    }
+    else {
+      message.channel.send("give your name and a day (eg. rob tuesday)")
+    };
   };
 
   /*  JAQUIE S. */
-  if (command === "jaq_monday") {
-    message.channel.send("LIT/MM1/REL/REL/LGL");
-  };
-  if (command === "jaq_tuesday") {
-    message.channel.send("LIT/LIT/BIO/BIO/PSY");
-  };
-  if (command === "jaq_wednesday") {
-    message.channel.send("LGL/LGL/BIO/PSY/LIT");
-  };
-  if (command === "jaq_thurday") {
-    message.channel.send("LGL/REL/MM1/PSY/PSY");
-  };
-  if (command === "jaq_friday") {
-    message.channel.send("MM1/MM1/ASS/REL/BIO");
+  if (command === "jaq") {
+    if (day === "monday") {
+      message.channel.send("LIT/MM1/REL/REL/LGL");
+    }
+    else if (day === "tuesday") {
+      message.channel.send("LIT/LIT/BIO/BIO/PSY");
+    }
+    else if (day === "wednesday") {
+      message.channel.send("LGL/LGL/BIO/PSY/LIT");
+    }
+    else if (day === "thursday") {
+      message.channel.send("LGL/REL/MM1/PSY/PSY");
+    }
+    else if (day === "friday") {
+      message.channel.send("MM1/MM1/ASS/REL/BIO");
+    }
+    else {
+      message.channel.send("give your name and a day (eg. rob tuesday)")
+    };
   };
 
   /*  DROVAN J. */
-  if (command === "dov_monday") {
-    message.channel.send("VSC/ENG/REL/REL/CMP");
-  };
-  if (command === "dov_tuesday") {
-    message.channel.send("VSC/VSC/VET/VET/GMA");
-  };
-  if (command === "dov_wednesday") {
-    message.channel.send("CMP/CMP/VET/GMA/VSC");
-  };
-  if (command === "dov_thurday") {
-    message.channel.send("CMP/REL/ENG/GMA/GMA");
-  };
-  if (command === "dov_friday") {
-    message.channel.send("ENG/ENG/ASS/REL/VET");
+  if (command === "dov") {
+    if (day === "monday") {
+      message.channel.send("VSC/ENG/REL/REL/CMP");
+    }
+    else if (day === "tuesday") {
+      message.channel.send("VSC/VSC/VET/VET/GMA");
+    }
+    else if (day === "wednesday") {
+      message.channel.send("CMP/CMP/VET/GMA/VSC");
+    }
+    else if (day === "thursday") {
+      message.channel.send("CMP/REL/ENG/GMA/GMA");
+    }
+    else if (day === "friday") {
+      message.channel.send("ENG/ENG/ASS/REL/VET");
+    }
+    else {
+      message.channel.send("give your name and a day (eg. rob tuesday)")
+    };
   };
 
   /*  ANTHONY G. */
-  if (command === "anth_monday") {
-    message.channel.send("REL/MM3/ENG/ENG/CMP");
-  };
-  if (command === "anth_tuesday") {
-    message.channel.send("REL/REL/PHS/PHS/CHM");
-  };
-  if (command === "anth_wednesday") {
-    message.channel.send("CMP/CMP/PHS/CHM/REL");
-  };
-  if (command === "anth_thurday") {
-    message.channel.send("CMP/ENG/MM3/CHM/CHM");
-  };
-  if (command === "anth_friday") {
-    message.channel.send("MM3/MM3/ASS/ENG/PHS");
+  if (command === "anth") {
+    if (day === "monday") {
+      message.channel.send("REL/MM3/ENG/ENG/CMP");
+    }
+    else if (day === "tuesday") {
+      message.channel.send("REL/REL/PHS/PHS/CHM");
+    }
+    else if (day === "wednesday") {
+      message.channel.send("CMP/CMP/PHS/CHM/REL");
+    }
+    else if (day === "thursday") {
+      message.channel.send("CMP/ENG/MM3/CHM/CHM");
+    }
+    else if (day === "friday") {
+      message.channel.send("MM3/MM3/ASS/ENG/PHS");
+    }
+    else {
+      message.channel.send("give your name and a day (eg. rob tuesday)")
+    };
   };
 
   /*  PETER M. */
-  if (command === "pete_monday") {
-    message.channel.send("VSC/ENG/REL/REL/CMP");
-  };
-  if (command === "pete_tuesday") {
-    message.channel.send("VSC/VSC/PHS/PHS/GMA");
-  };
-  if (command === "pete_wednesday") {
-    message.channel.send("CMP/CMP/PHS/GMA/VSC");
-  };
-  if (command === "pete_thurday") {
-    message.channel.send("CMP/REL/ENG/GMA/GMA");
-  };
-  if (command === "pete_friday") {
-    message.channel.send("ENG/ENG/ASS/REL/PHS");
+  if (command === "pete") {
+    if (day === "monday") {
+      message.channel.send("VSC/ENG/REL/REL/CMP");
+    }
+    else if (day === "tuesday") {
+      message.channel.send("VSC/VSC/PHS/PHS/GMA");
+    }
+    else if (day === "wednesday") {
+      message.channel.send("CMP/CMP/PHS/GMA/VSC");
+    }
+    else if (day === "thursday") {
+      message.channel.send("CMP/REL/ENG/GMA/GMA");
+    }
+    else if (day === "friday") {
+      message.channel.send("ENG/ENG/ASS/REL/PHS");
+    }
+    else {
+      message.channel.send("give your name and a day (eg. rob tuesday)")
+    };
   };
 
 });
