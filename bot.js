@@ -65,14 +65,16 @@ client.on("message", async message => {
     const d = new Date();
     const days = d.getDay();
     const hour = d.getHours();
+    const min = d.getMinutes();
     message.channel.send(hour);
+    message.channel.send(min);
     if (hour >= 15 && days < 7) {
       day = days + 1;
     };
     if (hour >= 15 && days === 7) {
       day = 1;
     };
-    message.channel.send(days);
+    message.channel.send(day);
     const who = message.author.id;
     /*    YEHYA A.    364940154927972353    */
     /*    DORVAN J.    246558516553187328    */
