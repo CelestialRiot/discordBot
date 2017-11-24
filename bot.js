@@ -20,13 +20,8 @@ client.on("message", async message => {
   if(message.author.bot) return;
   if(message.content.indexOf(config.prefix) !== 0) return;
 
-  const msg = message.content.slice(config.prefix.length).trim().split(/ +/g);
-  const args = msg.join(" ");
+  const args = message.content//.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  message.channel.send("0");
-  message.channel.send(msg);
-  message.channel.send(args);
-  message.channel.send(command);
 
   if (command === "check") {
     const who = message.author.id;
@@ -48,7 +43,7 @@ client.on("message", async message => {
   };
 
   if (command === "say") {
-    //const sayMessage = args.join(" ");
+    const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{});
     message.channel.send(sayMessage);
   };
