@@ -72,6 +72,10 @@ client.on("message", async message => {
     /*    DORVAN J.    246558516553187328    */
     /*    BRYAN G.    360035848902934538    */
 
+    message.channel.send(day);
+    message.channel.send(hour);
+    message.channel.send(who);
+
     if (day === '1') {
       if (who === '364940154927972353') {
         message.channel.send("REL/MM3/ENG/ENG/SP1"); //yehya
@@ -128,7 +132,7 @@ client.on("message", async message => {
       };
     }
     else {
-      message.channel.send("you pass butter")
+      message.channel.send("you pass butter");
     };
   };
 
