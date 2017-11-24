@@ -25,7 +25,7 @@ client.on("message", async message => {
 
   if (command === "say") {
     const sayMessage = args.join(" ");
-    message.delete();
+    message.delete().catch(O_o=>{});
     message.channel.send(sayMessage);
   };
 
@@ -65,7 +65,7 @@ client.on("message", async message => {
     const d = new Date();
     const days = d.getDay();
     const hour = d.getHours();
-    message.channel.send(days);
+    message.channel.send(hour);
     if (hour >= 15 && days < 7) {
       day = days + 1;
     };
