@@ -20,7 +20,8 @@ client.on("message", async message => {
   if(message.author.bot) return;
   if(message.content.indexOf(config.prefix) !== 0) return;
 
-  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  //const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const args = message.content.slice(config.prefix.length).trim();
   const command = args.shift().toLowerCase();
 
   if (command === "check") {
@@ -44,20 +45,10 @@ client.on("message", async message => {
 
   if (command === "say") {
     const sayMessage = args.join(" ");
-    message.delete().catch(O_o=>{}); 
+    message.delete().catch(O_o=>{});
     message.channel.send(sayMessage);
   };
-/*
-  if (command === "kill") {
-    const who = message.author.id;
-    if (who === '364940154927972353') {
-      message.channel.send("</3");
-    }
-    else {
-      message.channel.send("but love is the way </3");
-    };
-  };
-*/
+
   if (command === "iloveyoutoo") {
     message.channel.send("<3");
   };
@@ -146,7 +137,7 @@ client.on("message", async message => {
 //////////////
 
   /*  YEHYA A.  */
-  if (command === "yehya_monday") {
+  if (command === "yehya monday") {
     message.channel.send("REL/MM3/ENG/ENG/SP1");
   };
   if (command === "yehya_tuesday") {
