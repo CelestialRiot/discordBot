@@ -48,9 +48,8 @@ client.on("message", async message => {
   };
 
   if (command === "say") {
+    message.delete().catch(O_o=>{});
     const sayMessage = args.join(" ");
-    //.catch(O_o=>{})
-    message.delete();
     message.channel.send(sayMessage);
   };
 
