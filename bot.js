@@ -82,7 +82,7 @@ client.on("message", async message => {
     /*    DORVAN J.    246558516553187328    */
     /*    BRYAN G.    360035848902934538    */
 
-    const day = 1;
+    day = 1;
     if (day === 1) {
       if (who === '364940154927972353') {
         message.channel.send("REL/MM3/ENG/ENG/SP1"); //yehya
