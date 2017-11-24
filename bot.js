@@ -60,21 +60,18 @@ client.on("message", async message => {
     const d = new Date();
     const days = d.getDay();
     const hour = d.getHours();
+    message.channel.send(days);
     if (hour >= 15 && days < 7) {
       day = days + 1;
     };
     if (hour >= 15 && days === 7) {
       day = 1;
     };
-
+    message.channel.send(days);
     const who = message.author.id;
     /*    YEHYA A.    364940154927972353    */
     /*    DORVAN J.    246558516553187328    */
     /*    BRYAN G.    360035848902934538    */
-
-    message.channel.send(day);
-    message.channel.send(hour);
-    message.channel.send(who);
 
     if (day === '1') {
       if (who === '364940154927972353') {
@@ -140,53 +137,32 @@ client.on("message", async message => {
 //////////////
 
   /*  YEHYA A.  */
-  if (command === "yehya monday") {
-    message.channel.send("REL/MM3/ENG/ENG/SP1");
-  };
-  if (command === "yehya_tuesday") {
+  if (command === "yehya") {
+    const day = args.join(" ");
+    if (day === "monday") {
+      message.channel.send("REL/MM3/ENG/ENG/SP1");
+    }
     message.channel.send("REL/REL/PHS/PHS/CHM");
-  };
-  if (command === "yehya_wednesday") {
     message.channel.send("SP1/SP1/PHS/CHM/REL");
-  };
-  if (command === "yehya_thurday") {
     message.channel.send("SP1/ENG/MM3/CHM/CHM");
-  };
-  if (command === "yehya_friday") {
     message.channel.send("MM3/MM3/ASS/ENG/PHS");
   };
 
   /*  GEORGE A. */
-  if (command === "joji_monday") {
+  if (command === "joji") {
     message.channel.send("REl/ENG/BSM/BM1/CMP");
-  };
-  if (command === "joji_tuesday") {
     message.channel.send("REL/REL/PHS/PHS/GMA");
-  };
-  if (command === "joji_wednesday") {
     message.channel.send("CMP/CMP/PHS/GMA/REL");
-  };
-  if (command === "joji_thurday") {
     message.channel.send("CMP/BSM/ENG/GMA/GMA");
-  };
-  if (command === "joji_friday") {
     message.channel.send("ENG/ENG/ASS/BMA/PHS");
   };
 
   /*  ZEIN W. */
-  if (command === "zeus_monday") {
+  if (command === "zeus") {
     message.channel.send("HLT/REL/ENG/ENG/CMP");
-  };
-  if (command === "zeus_tuesday") {
     message.channel.send("HLT/HLT/PHS/PHS/GMA");
-  };
-  if (command === "zeus_wednesday") {
     message.channel.send("CMP/CMP/PHS/GMA/HLT");
-  };
-  if (command === "zeus_thurday") {
     message.channel.send("CMP/ENG/REL/GMA/GMA");
-  };
-  if (command === "zeus_friday") {
     message.channel.send("REL/REL/ASS/ENG/PHS");
   };
 
