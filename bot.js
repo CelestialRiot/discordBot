@@ -23,6 +23,11 @@ client.on("message", async message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
+  if(command === "ping") {
+    const m = await message.channel.send("Ping?");
+    m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+  }
+
   if (command === "check") {
     const who = message.author.id;
     if (who === '364940154927972353') {
@@ -44,7 +49,8 @@ client.on("message", async message => {
 
   if (command === "say") {
     const sayMessage = args.join(" ");
-    message.delete().catch(O_o=>{});
+    //.catch(O_o=>{})
+    message.delete();
     message.channel.send(sayMessage);
   };
 
@@ -161,6 +167,7 @@ client.on("message", async message => {
 
   /*  GEORGE A. */
   if (command === "joji") {
+    const day = args.join(" ");
     if (day === "monday") {
       message.channel.send("REl/ENG/BSM/BM1/CMP");
     }
@@ -183,6 +190,7 @@ client.on("message", async message => {
 
   /*  ZEIN W. */
   if (command === "zeus") {
+    const day = args.join(" ");
     if (day === "monday") {
       message.channel.send("HLT/REL/ENG/ENG/CMP");
     }
@@ -205,6 +213,7 @@ client.on("message", async message => {
 
   /*  BRYAN G.  */
   if (command === "bryan") {
+    const day = args.join(" ");
     if (day === "monday") {
     message.channel.send("VSC/REL/ENG/ENG/CMP");
     }
@@ -227,6 +236,7 @@ client.on("message", async message => {
 
   /*  HASSAN M. */
   if (command === "huss") {
+    const day = args.join(" ");
     if (day === "monday") {
       message.channel.send("VSC/REL/ENG/ENG/CMP");
     }
@@ -249,6 +259,7 @@ client.on("message", async message => {
 
   /*  JAQUIE S. */
   if (command === "jaq") {
+    const day = args.join(" ");
     if (day === "monday") {
       message.channel.send("LIT/MM1/REL/REL/LGL");
     }
@@ -271,6 +282,7 @@ client.on("message", async message => {
 
   /*  DROVAN J. */
   if (command === "dov") {
+    const day = args.join(" ");
     if (day === "monday") {
       message.channel.send("VSC/ENG/REL/REL/CMP");
     }
@@ -293,6 +305,7 @@ client.on("message", async message => {
 
   /*  ANTHONY G. */
   if (command === "anth") {
+    const day = args.join(" ");
     if (day === "monday") {
       message.channel.send("REL/MM3/ENG/ENG/CMP");
     }
@@ -314,7 +327,8 @@ client.on("message", async message => {
   };
 
   /*  PETER M. */
-  if (command === "pete") {
+  if (command === "peter") {
+    const day = args.join(" ");
     if (day === "monday") {
       message.channel.send("VSC/ENG/REL/REL/CMP");
     }
