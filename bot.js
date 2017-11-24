@@ -64,10 +64,15 @@ client.on("message", async message => {
   if (command === "whatismypurpose") {
     const d = new Date();
     const days = d.getDay();
-    const hour = d.getHours();
-    const min = d.getMinutes();
+    const hours = d.getHours();
+    const hour = hours +11;
+    const added_day = days;
     message.channel.send(hour);
-    message.channel.send(min);
+    if (hour > 23) {
+      hour = 0;
+      added_day = days + 1;
+    };
+    message.channel.send(hour);
     if (hour >= 15 && days < 7) {
       day = days + 1;
     };
