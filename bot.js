@@ -142,19 +142,39 @@ client.on("message", async message => {
     if (day === "monday") {
       message.channel.send("REL/MM3/ENG/ENG/SP1");
     }
-    message.channel.send("REL/REL/PHS/PHS/CHM");
-    message.channel.send("SP1/SP1/PHS/CHM/REL");
-    message.channel.send("SP1/ENG/MM3/CHM/CHM");
-    message.channel.send("MM3/MM3/ASS/ENG/PHS");
+    else if (day === "tuesday") {
+      message.channel.send("REL/REL/PHS/PHS/CHM");
+    }
+    else if (day === "wednesday") {
+      message.channel.send("SP1/SP1/PHS/CHM/REL");
+    }
+    else if (day === "thursday") {
+      message.channel.send("SP1/ENG/MM3/CHM/CHM");
+    }
+    else if (day === "friday") {
+      message.channel.send("MM3/MM3/ASS/ENG/PHS");
+    }
+    else {
+      message.channel.send("give your name and a day (eg. rob tuesday)")
+    };
   };
 
   /*  GEORGE A. */
   if (command === "joji") {
-    message.channel.send("REl/ENG/BSM/BM1/CMP");
-    message.channel.send("REL/REL/PHS/PHS/GMA");
-    message.channel.send("CMP/CMP/PHS/GMA/REL");
-    message.channel.send("CMP/BSM/ENG/GMA/GMA");
-    message.channel.send("ENG/ENG/ASS/BMA/PHS");
+    if (day === "monday") {
+      message.channel.send("REl/ENG/BSM/BM1/CMP");
+    }
+    else if (day === "tuesday") {
+      message.channel.send("REL/REL/PHS/PHS/GMA");
+    }
+    else if (day === "wednesday") {
+      message.channel.send("CMP/CMP/PHS/GMA/REL");
+    }
+
+      message.channel.send("CMP/BSM/ENG/GMA/GMA");
+
+      message.channel.send("ENG/ENG/ASS/BMA/PHS");
+
   };
 
   /*  ZEIN W. */
