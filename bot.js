@@ -23,6 +23,7 @@ client.on("message", async message => {
   const msg = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const args = msg.join(" ");
   const command = args.shift().toLowerCase();
+  message.channel.send(command);
 
   if (command === "check") {
     const who = message.author.id;
