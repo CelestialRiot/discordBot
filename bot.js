@@ -23,6 +23,9 @@ client.on("message", async message => {
   const msg = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const args = msg.join(" ");
   const command = args.shift().toLowerCase();
+  message.channel.send("0");
+  message.channel.send(msg);
+  message.channel.send(args);
   message.channel.send(command);
 
   if (command === "check") {
