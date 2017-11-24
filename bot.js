@@ -80,51 +80,87 @@ client.on("message", async message => {
     const who = message.author.id;
     /*    YEHYA A.    364940154927972353    */
     /*    DORVAN J.    246558516553187328    */
+    /*    BRYAN G.    360035848902934538    */
 
     if (day === '1') {
       if (who === '364940154927972353') {
-        message.channel.send("REL/MM3/ENG/ENG/SP1");
+        message.channel.send("REL/MM3/ENG/ENG/SP1"); //yehya
       }
       if (who === '246558516553187328') {
-        message.channel.send("VSC/ENG/REL/REL/CMP");
+        message.channel.send("VSC/ENG/REL/REL/CMP"); //dorvan
+      }
+      if (who === '360035848902934538') {
+        message.channel.send("VSC/REL/ENG/ENG/CMP"); //bryan
       }
     }
     else if (day === '2') {
       if (who === '364940154927972353') {
-        message.channel.send("REL/REL/PHS/PHS/CHM");
+        message.channel.send("REL/REL/PHS/PHS/CHM"); //yehya
       }
       if (who === '246558516553187328') {
-        message.channel.send("VSC/VSC/VET/VET/GMA");
+        message.channel.send("VSC/VSC/VET/VET/GMA"); //dorvan
+      }
+      if (who === '360035848902934538') {
+        message.channel.send("VSC/VSC/PHS/PHS/GMA"); //bryan
       }
     }
     else if (day === '3') {
       if (who === '364940154927972353') {
-        message.channel.send("SP1/SP1/PHS/CHM/REL");
+        message.channel.send("SP1/SP1/PHS/CHM/REL"); //yehya
       }
       if (who === '246558516553187328') {
-        message.channel.send("CMP/CMP/VET/GMA/VSC");
+        message.channel.send("CMP/CMP/VET/GMA/VSC"); //dorvan
+      }
+      if (who === '360035848902934538') {
+        message.channel.send("CMP/CMP/PHS/GMA/VSC"); //bryan
       }
     }
     else if (day === '4') {
       if (who === '364940154927972353') {
-        message.channel.send("SP1/ENG/MM3/CHM/CHM");
+        message.channel.send("SP1/ENG/MM3/CHM/CHM"); //yehya
       }
       if (who === '246558516553187328') {
-        message.channel.send("CMP/REL/ENG/GMA/GMA");
+        message.channel.send("CMP/REL/ENG/GMA/GMA"); //dorvan
+      }
+      if (who === '360035848902934538') {
+        message.channel.send("CMP/ENG/REL/GMA/GMA"); //bryan
       }
     }
     else if (day === '5') {
       if (who === '364940154927972353') {
-        message.channel.send("MM3/MM3/ASS/ENG/PHS");
+        message.channel.send("MM3/MM3/ASS/ENG/PHS"); //yehya
       }
       if (who === '246558516553187328') {
-        message.channel.send("ENG/ENG/ASS/REL/VET");
+        message.channel.send("ENG/ENG/ASS/REL/VET"); //dorvan
+      }
+      if (who === '360035848902934538') {
+        message.channel.send("REL/REL/ASS/ENG/PHS"); //bryan
       }
     }
     else {
       message.channel.send("you pass butter")
     }
   };
+
+
+//////////////
+
+  /*  YEHYA A.  */
+  if (command === "yehya_monday") {
+    message.channel.send("REL/MM3/ENG/ENG/SP1");
+  }
+  if (command === "yehya_tuesday") {
+    message.channel.send("REL/REL/PHS/PHS/CHM");
+  }
+  if (command === "yehya_wednesday") {
+    message.channel.send("SP1/SP1/PHS/CHM/REL");
+  }
+  if (command === "yehya_thurday") {
+    message.channel.send("SP1/ENG/MM3/CHM/CHM");
+  }
+  if (command === "yehya_friday") {
+    message.channel.send("MM3/MM3/ASS/ENG/PHS");
+  }
 
   /*  GEORGE A. */
   if (command === "joji_monday") {
@@ -211,6 +247,23 @@ client.on("message", async message => {
     message.channel.send("MM1/MM1/ASS/REL/BIO");
   }
 
+  /*  DROVAN J. */
+  if (command === "dov_monday") {
+    message.channel.send("VSC/ENG/REL/REL/CMP");
+  }
+  if (command === "dov_tuesday") {
+    message.channel.send("VSC/VSC/VET/VET/GMA");
+  }
+  if (command === "dov_wednesday") {
+    message.channel.send("CMP/CMP/VET/GMA/VSC");
+  }
+  if (command === "dov_thurday") {
+    message.channel.send("CMP/REL/ENG/GMA/GMA");
+  }
+  if (command === "dov_friday") {
+    message.channel.send("ENG/ENG/ASS/REL/VET");
+  }
+
   /*  ANTHONY G. */
   if (command === "anth_monday") {
     message.channel.send("REL/MM3/ENG/ENG/CMP");
@@ -246,4 +299,5 @@ client.on("message", async message => {
   }
 
 });
+
 client.login(process.env.BOT_TOKEN);
