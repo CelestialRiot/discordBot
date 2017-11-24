@@ -1,8 +1,8 @@
 {
-  "token": "MzgzMjA3NjQ4MTE3NjUzNTE0.DPhKug.l_E9b6vrCbkHAufP6jCHF6An-kE",
+  "name": "Test",
+  "description": "Test",
+  "version": "0.0.0",
   "prefix": "+",
-  "name": "package.json",
-  "version": "1.0.0",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
@@ -11,4 +11,3 @@
     "discord.js": "11.1.0",
     "request": "2.81.0"
   }
-}
