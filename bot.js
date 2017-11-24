@@ -47,7 +47,7 @@ client.on("message", async message => {
     message.delete().catch(O_o=>{}); 
     message.channel.send(sayMessage);
   };
-
+/*
   if (command === "kill") {
     const who = message.author.id;
     if (who === '364940154927972353') {
@@ -57,7 +57,7 @@ client.on("message", async message => {
       message.channel.send("but love is the way </3");
     };
   };
-
+*/
   if (command === "iloveyoutoo") {
     message.channel.send("<3");
   };
