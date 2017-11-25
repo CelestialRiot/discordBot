@@ -17,10 +17,7 @@ client.on('guildDelete', guild => {
 client.on('message', async message => {
   if(message.author.bot) return
   const botName = 'celeste';
-  if(message.content.indexOf(botName)+2 === 'prefix') {
-    message.channel.send('prefix: '+config.prefix);
-    return;
-  }
+  if (message.content === botName + ' prefix') {message.channel.send(config.prefix)}
   if(message.content.indexOf(config.prefix) !== 0) return
 
 // all of users' data
