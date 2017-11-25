@@ -44,7 +44,7 @@ client.on("message", async message => {
     }
   };
 
-  if (command === "givemeyourid") {
+  if (command === "givemeyourid" || command === "ineedit") {
     const who = message.author.id;
     message.channel.send(who);
   };
@@ -67,13 +67,15 @@ client.on("message", async message => {
     /*    YEHYA A.    364940154927972353    */
     /*    DORVAN J.    246558516553187328    */
     /*    BRYAN G.    360035848902934538    */
+    /*    ANTHONY G.    246547506056527873    */
+    /*    GEORGE A.    245588462797848576    */
 
     const d = new Date();
     const days = d.getDay();
     const hours = d.getHours();
     const hour = hours + 11;
     const day = days;
-    message.channel.send(hours+','+hour,+','+days+','+day);
+    message.channel.send(day);
     if (hour > 23) {
       hour = 0;
       day = days + 1;
@@ -97,6 +99,12 @@ client.on("message", async message => {
       if (who === '360035848902934538') {
         message.channel.send("VSC/REL/ENG/ENG/CMP"); //bryan
       };
+      if (who === '246547506056527873') {
+        message.channel.send("VSC/REL/ENG/ENG/CMP"); //anthony
+      };
+      if (who === '245588462797848576') {
+        message.channel.send("VSC/REL/ENG/ENG/CMP"); //george
+      };
     }
     else if (day === 2) {
       if (who === '364940154927972353') {
@@ -107,6 +115,12 @@ client.on("message", async message => {
       };
       if (who === '360035848902934538') {
         message.channel.send("VSC/VSC/PHS/PHS/GMA"); //bryan
+      };
+      if (who === '246547506056527873') {
+        message.channel.send("VSC/REL/ENG/ENG/CMP"); //anthony
+      };
+      if (who === '245588462797848576') {
+        message.channel.send("VSC/REL/ENG/ENG/CMP"); //george
       };
     }
     else if (day === 3) {
@@ -119,6 +133,12 @@ client.on("message", async message => {
       if (who === '360035848902934538') {
         message.channel.send("CMP/CMP/PHS/GMA/VSC"); //bryan
       };
+      if (who === '246547506056527873') {
+        message.channel.send("VSC/REL/ENG/ENG/CMP"); //anthony
+      };
+      if (who === '245588462797848576') {
+        message.channel.send("VSC/REL/ENG/ENG/CMP"); //george
+      };
     }
     else if (day === 4) {
       if (who === '364940154927972353') {
@@ -130,6 +150,12 @@ client.on("message", async message => {
       if (who === '360035848902934538') {
         message.channel.send("CMP/ENG/REL/GMA/GMA"); //bryan
       };
+      if (who === '246547506056527873') {
+        message.channel.send("VSC/REL/ENG/ENG/CMP"); //anthony
+      };
+      if (who === '245588462797848576') {
+        message.channel.send("VSC/REL/ENG/ENG/CMP"); //george
+      };
     }
     else if (day === 5) {
       if (who === '364940154927972353') {
@@ -140,6 +166,12 @@ client.on("message", async message => {
       };
       if (who === '360035848902934538') {
         message.channel.send("REL/REL/ASS/ENG/PHS"); //bryan
+      };
+      if (who === '246547506056527873') {
+        message.channel.send("VSC/REL/ENG/ENG/CMP"); //anthony
+      };
+      if (who === '245588462797848576') {
+        message.channel.send("VSC/REL/ENG/ENG/CMP"); //george
       };
     }
     else {
