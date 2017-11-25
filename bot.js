@@ -27,7 +27,7 @@ client.on("message", async message => {
 // user[0][2] gives user 0's entire timetable
 // user[0][2][0] gives user 0's monday timetable, from monday[0] to friday[4]
 //0=yehya 1=dorvan 2=anthony 3=bryan 4=george 5=zein 6=jackie 7=peter 8=hassan 9=oliver
-const usr =
+var usr =
   [
     /*  YEHYA A. 0 */
     ['yehya','364940154927972353',
@@ -131,7 +131,7 @@ const usr =
     ],
   ];
 
-  const days = ['monday','tuesday','wednesday','thursday','friday'];
+  var days = ['monday','tuesday','wednesday','thursday','friday'];
   const id = message.author.id;
   for (var i = 0; i < usr.length; i++) if (usr[i][1] === id) const indx = i
   const name = usr[indx][0];
@@ -164,7 +164,7 @@ const usr =
    const req = args.join(" ");
     for (var i = 0; i < days.length; i++) {
       if (days[i] === req) {
-				const day = i;
+				var day = i;
 				message.channel.send(usr[indx][2][day]);
 			}
 			else {
