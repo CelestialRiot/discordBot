@@ -15,8 +15,8 @@ client.on("guildDelete", guild => {
 });
 
 client.on("message", async message => {
-  if(message.author.bot) return;
-  if(message.content.indexOf(config.prefix) !== 0) return;
+  if(message.author.bot) return
+  if(message.content.indexOf(config.prefix) !== 0) return
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
@@ -140,10 +140,10 @@ const usr =
   if(command === "ping") {
     const m = await message.channel.send("Ping?");
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
-  };
+  }
   if (command === "myid") {
     message.channel.send(name+': '+id);
-  };
+  }
   if (command === "check") {
     const id = message.author.id;
     if (name === 'yehya') {
@@ -151,14 +151,14 @@ const usr =
     }
     else {
       message.channel.send("alive");
-    };
-  };
+    }
+  }
   /* misc commands */
   if (command === "say") {
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{});
     message.channel.send(sayMessage);
-  };
+  }
   /* timetable commands */
   if (command === name) {
    const req = args.join(" ");
@@ -169,8 +169,8 @@ const usr =
 			}
 			else {
 				message.channel.send("give your name and a day only")
-			};
-		};
-  };
+			}
+		}
+  }
 
 client.login(process.env.BOT_TOKEN);
