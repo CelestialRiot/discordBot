@@ -67,6 +67,7 @@ client.on("message", async message => {
     const hours = d.getHours();
     const hour = hours +11;
     const added_day = days;
+    message.channel.send(hours+','+hour,+','+days);
     if (hour > 23) {
       hour = 0;
       added_day = days + 1;
@@ -82,7 +83,8 @@ client.on("message", async message => {
     /*    DORVAN J.    246558516553187328    */
     /*    BRYAN G.    360035848902934538    */
 
-    day = 1;
+    message.channel.send(hours+','+hour,+','+days);
+
     if (day === 1) {
       if (who === '364940154927972353') {
         message.channel.send("REL/MM3/ENG/ENG/SP1"); //yehya
@@ -142,7 +144,6 @@ client.on("message", async message => {
       message.channel.send("you pass butter");
     };
   };
-
 
 //////////////
 
