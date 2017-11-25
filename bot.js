@@ -133,7 +133,7 @@ var usr =
 
   var days = ['monday','tuesday','wednesday','thursday','friday'];
   const id = message.author.id;
-  for (var i = 0; i < usr.length; i++) if (usr[i][1] === id) const indx = i
+  for (var i = 0; i < usr.length; i++) if (usr[i][1] === id) var indx = i
   const name = usr[indx][0];
 
   /* utility commands */
