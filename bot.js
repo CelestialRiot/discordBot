@@ -1,24 +1,27 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client();
-const config = require("./package.json");
-client.on("ready", () => {
+const config = require('./package.json');
+client.on('ready', () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
   client.user.setGame(`on ${client.guilds.size} servers`);
 });
-client.on("guildCreate", guild => {
+client.on('guildCreate', guild => {
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
   client.user.setGame(`on ${client.guilds.size} servers`);
 });
-client.on("guildDelete", guild => {
+client.on('guildDelete', guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
   client.user.setGame(`on ${client.guilds.size} servers`);
 });
 
-client.on("message", async message => {
+client.on('message', async message => {
   if(message.author.bot) return
+  const botName = 'celeste';
+  if(message.content.indexOf(botName)+2 === 'prefix') {
+    message.channel.send('prefix: '+config.prefix);
+    return;
+  }
   if(message.content.indexOf(config.prefix) !== 0) return
-  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
 
 // all of users' data
 // usr[0] gives a user's details (user 0), change '0' to change user
@@ -131,37 +134,50 @@ const usr =
     ],
   ];
 
-  const days = ['monday','tuesday','wednesday','thursday','friday'];
+  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
   const id = message.author.id;
+  const days = ['monday','tuesday','wednesday','thursday','friday'];
   for (var i = 0; i < usr.length; i++) if (usr[i][1] === id) var indx = i
   const name = usr[indx][0];
 
   /* utility commands */
-  if(command === "ping") {
-    const m = await message.channel.send("Ping?");
+  if (command === 'help') {
+    message.channel.send('**Celeste commands:**\
+      ');
+  }
+  if(command === 'ping') {
+    const m = await message.user.send('Ping?');
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
-  if (command === "myid") {
+  if (command === 'myid') {
     message.channel.send(name+': '+id);
   }
-  if (command === "check") {
+  if (command === 'check') {
     const id = message.author.id;
     if (name === 'yehya') {
-      message.channel.send("alive, thanks to you, father");
+      message.channel.send('alive, thanks to you, father');
     }
     else {
-      message.channel.send("alive");
+      message.channel.send('alive');
     }
   }
   /* misc commands */
-  if (command === "say") {
-    const sayMessage = args.join(" ");
+  if (command === 'say') {
+    const text = args.join(' ');
     message.delete().catch(O_o=>{});
-    message.channel.send(sayMessage);
+    message.channel.send(text);
+  }
+  if (command === 'thank' || command === 'thanks') {
+    message.channel.send("you're welcome :3");
+  }
+  if (command === 'love') {
+    message.delete().catch(O_o=>{});
+    message.channel.send("<3");
   }
   /* timetable commands */
   if (command === name) {
-    const req = args.join(" ");
+    const req = args.join(' ');
     var exit = false;
     for (var i = 0; i < days.length; i++) {
       if (days[i] === req) {
@@ -171,7 +187,7 @@ const usr =
       }
     }
     if (exit === false) {
-      message.channel.send("you pass butter");
+      message.channel.send('you pass butter');
     }
   }
 });
