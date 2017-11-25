@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./package.json");
-message.channel.send("check-1")
+message.channel.send("check-1");
 client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
   client.user.setGame(`on ${client.guilds.size} servers`);
@@ -14,7 +14,7 @@ client.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
   client.user.setGame(`on ${client.guilds.size} servers`);
 });
-message.channel.send("check-2")
+message.channel.send("check-2");
 const days = ['monday','tuesday','wednesday','thursday','friday'];
 
 // all of users' data
@@ -127,14 +127,14 @@ const usr =
 	  	],
 	  ],
 	];
-message.channel.send("check-3")
+message.channel.send("check-3");
 client.on("message", async message => {
-  message.channel.send("check0")
+  message.channel.send("check0");
   if(message.author.bot) return;
   if(message.content.indexOf(config.prefix) !== 0) return;
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  message.channel.send("check1")
+  message.channel.send("check1");
   const id = toString(message.author.id);
   for (var i = 0; i < usr.length; i++) if (usr[i][1] === id) const indx = i
   const name = usr[indx][0];
@@ -156,33 +156,33 @@ client.on("message", async message => {
       message.channel.send("alive");
     };
   };
-  message.channel.send("check2")
+  message.channel.send("check2");
   /* misc commands */
   if (command === "say") {
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{});
     message.channel.send(sayMessage);
   };
-  message.channel.send("check3")
+  message.channel.send("check3");
   /* timetable commands */
   if (command === name) {
    // get what comes after the name
    const req = args.join(" ");
-   message.channel.send("check4")
+   message.channel.send("check4");
    // look for the match of messaged day and the index of that day
     for (var i = 0; i < days.length; i++) {
       if (days[i] === req) {
 				// make day equal index
 				const day = i;
 				message.channel.send(usr[indx][2][day]);
-				message.channel.send("check5")
+				message.channel.send("check5");
 			}
 			else {
 				message.channel.send("give your name and a day only")
 			};
 		};
   };
-  message.channel.send("check6")
+  message.channel.send("check6");
   /*
   if (command === "whatismypurpose") {
   	const d = new Date();
