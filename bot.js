@@ -138,10 +138,33 @@ const usr =
   for (var i = 0; i < usr.length; i++) if (usr[i][1] === id) var indx = i
   const name = usr[indx][0];
 
-  /* utility commands */
   if (command === 'help') {
-    message.channel.send('**Celeste commands:**\
-      ');
+    message.channel.send("**celeste commands:**\n\
+      'celeste prefix': gives the bot's prefix\n\
+      \n\
+      **prefix commands:**\n\
+      *utility*\n\
+      'check': responds\n\
+      'ping': gives server + your ping\n\
+      'myid': gives your id number\n\
+      \n\
+      *speech*\n\
+      'say (text)': deletes the command and sends text from bot\n\
+      'thank' or 'thanks': replies\n\
+      'love': deletes the command and sends (<3)\n\
+      \n\
+      *timetable*\n\
+      '(name) + (day)': gives the person's timetable for that dayn\n\
+      'whatismypurpose': gives the next timetable if available");
+  }
+  /* utility commands */
+  if (command === 'check') {
+    if (name === 'yehya') {
+      message.channel.send('alive, thanks to you, father');
+    }
+    else {
+      message.channel.send('alive');
+    }
   }
   if(command === 'ping') {
     const m = await message.user.send('Ping?');
@@ -150,16 +173,7 @@ const usr =
   if (command === 'myid') {
     message.channel.send(name+': '+id);
   }
-  if (command === 'check') {
-    const id = message.author.id;
-    if (name === 'yehya') {
-      message.channel.send('alive, thanks to you, father');
-    }
-    else {
-      message.channel.send('alive');
-    }
-  }
-  /* misc commands */
+  /* speech commands */
   if (command === 'say') {
     const text = args.join(' ');
     message.delete().catch(O_o=>{});
