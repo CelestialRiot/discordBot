@@ -37,7 +37,7 @@ client.on("message", async message => {
   if (command === "check") {
     const who = message.author.id;
     if (who === '364940154927972353') {
-      message.channel.send("alive, thanks to you, daddy");
+      message.channel.send("alive, thanks to you, father");
     }
     else {
       message.channel.send("alive");
@@ -67,23 +67,23 @@ client.on("message", async message => {
     const hours = d.getHours();
     const hour = hours +11;
     const added_day = days;
-    message.channel.send(hours+','+hour,+','+days);
+    message.channel.send(hours+','+hour,+','+added_day);
     if (hour > 23) {
       hour = 0;
       added_day = days + 1;
     };
     if (hour >= 15 && days < 7) {
-      day = days + 1;
+      added_day = days + 1;
     };
     if (hour >= 15 && days === 7) {
-      day = 1;
+      added_day = 1;
     };
     const who = message.author.id;
     /*    YEHYA A.    364940154927972353    */
     /*    DORVAN J.    246558516553187328    */
     /*    BRYAN G.    360035848902934538    */
 
-    message.channel.send(hours+','+hour,+','+days);
+    message.channel.send(hours+','+hour,+','+added_day);
 
     if (day === 1) {
       if (who === '364940154927972353') {
