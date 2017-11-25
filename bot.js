@@ -67,13 +67,13 @@ client.on("message", async message => {
     /*    YEHYA A.    364940154927972353    */
     /*    DORVAN J.    246558516553187328    */
     /*    BRYAN G.    360035848902934538    */
-    
+
     const d = new Date();
     const days = d.getDay();
     const hours = d.getHours();
     const hour = hours + 11;
     const day = days;
-    message.channel.send(hours+','+hour,+','+day+',');
+    message.channel.send(hours+','+hour,+','+days+','+day);
     if (hour > 23) {
       hour = 0;
       day = days + 1;
