@@ -44,7 +44,7 @@ client.on("message", async message => {
     }
   };
 
-  if (command === "ineedit") {
+  if (command === "givemeyourid") {
     const who = message.author.id;
     message.channel.send(who);
   };
@@ -62,32 +62,34 @@ client.on("message", async message => {
   }
 
   if (command === "whatismypurpose") {
-    const d = new Date();
-    const days = d.getDay();
-    const hours = d.getHours();
-    const hour = hours +11;
-    const added_day = days;
-    message.channel.send(hours+','+hour,+','+added_day);
-    if (hour > 23) {
-      hour = 0;
-      added_day = days + 1;
-    };
-    if (hour >= 15 && days < 7) {
-      added_day = days + 1;
-    };
-    if (hour >= 15 && days === 7) {
-      added_day = 1;
-    };
+
     const who = message.author.id;
     /*    YEHYA A.    364940154927972353    */
     /*    DORVAN J.    246558516553187328    */
     /*    BRYAN G.    360035848902934538    */
+    
+    const d = new Date();
+    const days = d.getDay();
+    const hours = d.getHours();
+    const hour = hours + 11;
+    const day = days;
+    message.channel.send(hours+','+hour,+','+day+',');
+    if (hour > 23) {
+      hour = 0;
+      day = days + 1;
+    };
+    if (hour >= 15 && day < 7) {
+      day = days + 1;
+    };
+    if (hour >= 15 && day === 7) {
+      day = 1;
+    };
 
-    message.channel.send(hours+','+hour,+','+added_day);
+    message.channel.send(hours+','+hour,+','+day+',');
 
     if (day === 1) {
       if (who === '364940154927972353') {
-        message.channel.send("REL/MM3/ENG/ENG/SP1"); //yehya
+        message.channel.send("REL/MM3/ENG/ENG/SPM"); //yehya
       };
       if (who === '246558516553187328') {
         message.channel.send("VSC/ENG/REL/REL/CMP"); //dorvan
@@ -109,7 +111,7 @@ client.on("message", async message => {
     }
     else if (day === 3) {
       if (who === '364940154927972353') {
-        message.channel.send("SP1/SP1/PHS/CHM/REL"); //yehya
+        message.channel.send("SPM/SPM/PHS/CHM/REL"); //yehya
       };
       if (who === '246558516553187328') {
         message.channel.send("CMP/CMP/VET/GMA/VSC"); //dorvan
@@ -120,7 +122,7 @@ client.on("message", async message => {
     }
     else if (day === 4) {
       if (who === '364940154927972353') {
-        message.channel.send("SP1/ENG/MM3/CHM/CHM"); //yehya
+        message.channel.send("SPM/ENG/MM3/CHM/CHM"); //yehya
       };
       if (who === '246558516553187328') {
         message.channel.send("CMP/REL/ENG/GMA/GMA"); //dorvan
@@ -151,16 +153,16 @@ client.on("message", async message => {
   if (command === "yehya") {
     const day = args.join(" ");
     if (day === "monday") {
-      message.channel.send("REL/MM3/ENG/ENG/SP1");
+      message.channel.send("REL/MM3/ENG/ENG/SPM");
     }
     else if (day === "tuesday") {
       message.channel.send("REL/REL/PHS/PHS/CHM");
     }
     else if (day === "wednesday") {
-      message.channel.send("SP1/SP1/PHS/CHM/REL");
+      message.channel.send("SPM/SPM/PHS/CHM/REL");
     }
     else if (day === "thursday") {
-      message.channel.send("SP1/ENG/MM3/CHM/CHM");
+      message.channel.send("SPM/ENG/MM3/CHM/CHM");
     }
     else if (day === "friday") {
       message.channel.send("MM3/MM3/ASS/ENG/PHS");
@@ -243,19 +245,19 @@ client.on("message", async message => {
   if (command === "huss") {
     const day = args.join(" ");
     if (day === "monday") {
-      message.channel.send("VSC/REL/ENG/ENG/CMP");
+      message.channel.send("REL/MM3/ENG/ENG/SPM");
     }
     else if (day === "tuesday") {
-      message.channel.send("VSC/VSC/PHS/PHS/GMA");
+      message.channel.send("REL/REL/BIO/BIO/CHM");
     }
     else if (day === "wednesday") {
-      message.channel.send("CMP/CMP/PHS/GMA/VSC");
+      message.channel.send("SPM/SPM/BIO/CHM/REL");
     }
     else if (day === "thursday") {
-      message.channel.send("CMP/ENG/REL/GMA/GMA");
+      message.channel.send("SPM/ENG/MM3/CHM/CHM");
     }
     else if (day === "friday") {
-      message.channel.send("REL/REL/ASS/ENG/PHS");
+      message.channel.send("MM3/MM3/ASS/ENG/BIO");
     }
     else {
       message.channel.send("give your name and a day (eg. rob tuesday)")
