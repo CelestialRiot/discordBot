@@ -161,16 +161,18 @@ const usr =
   }
   /* timetable commands */
   if (command === name) {
-   const req = args.join(" ");
+    const req = args.join(" ");
+    var exit = false;
     for (var i = 0; i < days.length; i++) {
       if (days[i] === req) {
-				var day = i;
-				message.channel.send(usr[indx][2][day]);
-			}
-			else {
-				message.channel.send("give your name and a day only")
-			}
-		}
+        var day = i;
+        message.channel.send(usr[indx][2][day]);
+        exit = true;
+      }
+    }
+    if (exit === false) {
+      message.channel.send("you pass butter");
+    }
   }
 });
 
