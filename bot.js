@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./package.json");
-message.channel.send("check-1");
 client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
   client.user.setGame(`on ${client.guilds.size} servers`);
@@ -14,8 +13,15 @@ client.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
   client.user.setGame(`on ${client.guilds.size} servers`);
 });
-message.channel.send("check-2");
-const days = ['monday','tuesday','wednesday','thursday','friday'];
+
+client.on("message", async message => {
+  if(message.author.bot) return;
+  if(message.content.indexOf(config.prefix) !== 0) return;
+  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+  const id = toString(message.author.id);
+
+  const days = ['monday','tuesday','wednesday','thursday','friday'];
 
 // all of users' data
 // usr[0] gives a user's details (user 0), change '0' to change user
@@ -26,7 +32,7 @@ const days = ['monday','tuesday','wednesday','thursday','friday'];
 //0=yehya 1=dorvan 2=anthony 3=bryan 4=george 5=zein 6=jackie 7=peter 8=hassan 9=oliver
 const usr =
   [
-    /*	YEHYA A. 0 */
+    /*  YEHYA A. 0 */
     ['yehya','364940154927972353',
       [
         'REL/MM3/ENG/ENG/SPM',
@@ -36,7 +42,7 @@ const usr =
         'MM3/MM3/ASS/ENG/PHS',
       ],
     ],
-    /*	DORVAN J. 1	*/
+    /*  DORVAN J. 1 */
     ['dorvan','246558516553187328',
       [
         'VSC/ENG/REL/REL/CMP',
@@ -46,7 +52,7 @@ const usr =
         'ENG/ENG/ASS/REL/VET',
       ],
     ],
-    /*	ANTHONY G. 2	*/
+    /*  ANTHONY G. 2  */
     ['anthony','246547506056527873',
       [
         'REL/MM3/ENG/ENG/CMP',
@@ -56,7 +62,7 @@ const usr =
         'MM3/MM3/ASS/ENG/PHS',
       ],
     ],
-    /*	BRYAN G. 3	*/
+    /*  BRYAN G. 3  */
     ['bryan','360035848902934538',
       [
         'VSC/REL/ENG/ENG/CMP',
@@ -66,76 +72,68 @@ const usr =
         'REL/REL/ASS/ENG/PHS',
       ],
     ],
-    /*	GEORGE A. 4	*/
+    /*  GEORGE A. 4 */
     ['george','245588462797848576',
       [
-	  		'REl/ENG/BSM/BSM/CMP',
-				'REL/REL/PHS/PHS/GMA',
-				'CMP/CMP/PHS/GMA/REL',
-				'CMP/BSM/ENG/GMA/GMA',
-				'ENG/ENG/ASS/BSM/PHS',
-	  	],
-	  ],
-	  /*	ZEIN W. 5	*/
-	  ['zein','378463394451161090',
-	  	[
-				'HLT/REL/ENG/ENG/CMP',
-				'HLT/HLT/PHS/PHS/GMA',
-				'CMP/CMP/PHS/GMA/HLT',
-				'CMP/ENG/REL/GMA/GMA',
-				'REL/REL/ASS/ENG/PHS',
-	  	],
-	  ],
-	  /*	JACKIE S. 6	*/
-	  ['jackie',['150425470255628289'],
-	  	[
-				'LIT/MM1/REL/REL/LGL',
-				'LIT/LIT/BIO/BIO/PSY',
-				'LGL/LGL/BIO/PSY/LIT',
-				'LGL/REL/MM1/PSY/PSY',
-				'MM1/MM1/ASS/REL/BIO',
-	  	],
-	  ],
-	  /*	PETER M. 7	*/
-	  ['peter','245794606208253952',
-	  	[
-				'VSC/ENG/REL/REL/CMP',
-				'VSC/VSC/PHS/PHS/GMA',
-				'CMP/CMP/PHS/GMA/VSC',
-				'CMP/REL/ENG/GMA/GMA',
-				'ENG/ENG/ASS/REL/PHS',
-	  	],
-	  ],
-	  /*	HASSAN M. 8	*/
-	  ['hassan','358438947032006657',
-	  	[
-				'REL/MM3/ENG/ENG/SPM',
-				'REL/REL/BIO/BIO/CHM',
-				'SPM/SPM/BIO/CHM/REL',
-				'SPM/ENG/MM3/CHM/CHM',
-				'MM3/MM3/ASS/ENG/BIO',
-	  	],
-	  ],
-	  /*	OLIVER S. 9	*/
-	  ['oliver','311756864897417217',
-	  	[
-	      'LIT/MM1/ENG/ENG/REL',
-	      'LIT/LIT/PHS/PHS/BSM',
-	      'REL/REL/PHS/BSM/LIT',
-	      'REL/ENG/MM1/BSM/BSM',
-	      'MM1/MM1/ASS/ENG/PHS',
-	  	],
-	  ],
-	];
-message.channel.send("check-3");
-client.on("message", async message => {
-  message.channel.send("check0");
-  if(message.author.bot) return;
-  if(message.content.indexOf(config.prefix) !== 0) return;
-  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-  message.channel.send("check1");
-  const id = toString(message.author.id);
+        'REl/ENG/BSM/BSM/CMP',
+        'REL/REL/PHS/PHS/GMA',
+        'CMP/CMP/PHS/GMA/REL',
+        'CMP/BSM/ENG/GMA/GMA',
+        'ENG/ENG/ASS/BSM/PHS',
+      ],
+    ],
+    /*  ZEIN W. 5 */
+    ['zein','378463394451161090',
+      [
+        'HLT/REL/ENG/ENG/CMP',
+        'HLT/HLT/PHS/PHS/GMA',
+        'CMP/CMP/PHS/GMA/HLT',
+        'CMP/ENG/REL/GMA/GMA',
+        'REL/REL/ASS/ENG/PHS',
+      ],
+    ],
+    /*  JACKIE S. 6 */
+    ['jackie',['150425470255628289'],
+      [
+        'LIT/MM1/REL/REL/LGL',
+        'LIT/LIT/BIO/BIO/PSY',
+        'LGL/LGL/BIO/PSY/LIT',
+        'LGL/REL/MM1/PSY/PSY',
+        'MM1/MM1/ASS/REL/BIO',
+      ],
+    ],
+    /*  PETER M. 7  */
+    ['peter','245794606208253952',
+      [
+        'VSC/ENG/REL/REL/CMP',
+        'VSC/VSC/PHS/PHS/GMA',
+        'CMP/CMP/PHS/GMA/VSC',
+        'CMP/REL/ENG/GMA/GMA',
+        'ENG/ENG/ASS/REL/PHS',
+      ],
+    ],
+    /*  HASSAN M. 8 */
+    ['hassan','358438947032006657',
+      [
+        'REL/MM3/ENG/ENG/SPM',
+        'REL/REL/BIO/BIO/CHM',
+        'SPM/SPM/BIO/CHM/REL',
+        'SPM/ENG/MM3/CHM/CHM',
+        'MM3/MM3/ASS/ENG/BIO',
+      ],
+    ],
+    /*  OLIVER S. 9 */
+    ['oliver','311756864897417217',
+      [
+        'LIT/MM1/ENG/ENG/REL',
+        'LIT/LIT/PHS/PHS/BSM',
+        'REL/REL/PHS/BSM/LIT',
+        'REL/ENG/MM1/BSM/BSM',
+        'MM1/MM1/ASS/ENG/PHS',
+      ],
+    ],
+  ];
+
   for (var i = 0; i < usr.length; i++) if (usr[i][1] === id) const indx = i
   const name = usr[indx][0];
 
@@ -156,49 +154,24 @@ client.on("message", async message => {
       message.channel.send("alive");
     };
   };
-  message.channel.send("check2");
   /* misc commands */
   if (command === "say") {
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{});
     message.channel.send(sayMessage);
   };
-  message.channel.send("check3");
   /* timetable commands */
   if (command === name) {
-   // get what comes after the name
    const req = args.join(" ");
-   message.channel.send("check4");
-   // look for the match of messaged day and the index of that day
     for (var i = 0; i < days.length; i++) {
       if (days[i] === req) {
-				// make day equal index
 				const day = i;
 				message.channel.send(usr[indx][2][day]);
-				message.channel.send("check5");
 			}
 			else {
 				message.channel.send("give your name and a day only")
 			};
 		};
   };
-  message.channel.send("check6");
-  /*
-  if (command === "whatismypurpose") {
-  	const d = new Date();
-    const hour = d.getHours() + 11;
-
-    if (hour > 23) {
-      hour = 0;
-      day = days + 1;
-    };
-    if (hour >= 15 && day < 7) {
-      day = days + 1;
-    };
-    if (hour >= 15 && day === 7) {
-      day = 1;
-    };
-  }
-  */
 
 client.login(process.env.BOT_TOKEN);
