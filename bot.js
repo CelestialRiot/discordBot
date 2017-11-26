@@ -156,6 +156,7 @@ const usr =
 'love': deletes the command and sends (<3)\n\
 \n\
 *timetable*\n\
+'timetable': gives the timetable for the whole week\n\
 '(name) + (day)': gives the person's timetable for that day\n\
 'whatismypurpose': gives the next timetable if available\
 ");
