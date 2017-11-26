@@ -208,24 +208,19 @@ const usr =
     const utc = d.getHours();
     var hour = utc + 11;
     const err = 'you pass butter';
-    message.channel.send(utc+','+hour+','+day)
-    if (hour > 23) {
-      hour -= 24;
-      day += 1;
-    }
-    if (hour >= 15) {
-      day += 1;
-    }
-    if (day > 6) {
-      day = 0;
-    }
+
+    message.channel.send(utc+','+hour+','+day);
+    if(hour > 23) {hour -= 24;day += 1;}
+    if(hour >= 15) day += 1
+    if(day > 6) day = 0
+    message.channel.send(utc+','+hour+','+day);
+
     if (day > days.length) {
       message.channel.send(err);
     }
     else {
       message.channel.send(err);
     }
-    message.channel.send(utc+','+hour+','+day)
   }
 });
 
