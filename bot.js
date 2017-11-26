@@ -137,7 +137,7 @@ const usr =
   const id = message.author.id;
   const days = ['monday','tuesday','wednesday','thursday','friday'];
   for (var i = 0; i < usr.length; i++) if (usr[i][1] === id) var indx = i
-  const name = usr[indx][0];
+  var name = usr[indx][0];
 
   if (command === 'help') {
     message.author.send("\
@@ -190,6 +190,9 @@ const usr =
     message.channel.send("<3");
   }
   /* timetable commands */
+  for (var i = 0; i < usr.length; i++) {
+    if (usr[i][0] === command) name = command
+  }
   if (command === name) {
     const req = args.join(' ').toLowerCase();
     var exit = false;
