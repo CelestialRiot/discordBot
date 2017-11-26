@@ -204,7 +204,7 @@ const usr =
   }
   if (command === 'whatismypurpose') {
     const d = new Date();
-    var day = d.getDay()-1;
+    var day = d.getDay();
     const utc = d.getHours();
     var hour = utc + 11;
     const err = 'you pass butter';
