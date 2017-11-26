@@ -213,11 +213,11 @@ const usr =
   }
   if (command === 'timetable') {
     message.channel.send(
-'Monday: \n'+'`'+usr[indx][2][0]+'`\n'+
-'Tuesday: \n'+'`'+usr[indx][2][1]+'`\n'+
-'Wednesday: \n'+'`'+usr[indx][2][2]+'`\n'+
-'Thursday: \n'+'`'+usr[indx][2][3]+'`\n'+
-'Friday: \n'+'`'+usr[indx][2][4]+'`\n'
+'*Monday:* \n'+'`'+usr[indx][2][0]+'`\n'+
+'*Tuesday:* \n'+'`'+usr[indx][2][1]+'`\n'+
+'*Wednesday:* \n'+'`'+usr[indx][2][2]+'`\n'+
+'*Thursday:* \n'+'`'+usr[indx][2][3]+'`\n'+
+'*Friday:* \n'+'`'+usr[indx][2][4]+'`\n'
     );
   }
   if (command === 'whatismypurpose') {
