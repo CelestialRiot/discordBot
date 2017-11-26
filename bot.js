@@ -140,23 +140,23 @@ const usr =
   const name = usr[indx][0];
 
   if (command === 'help') {
-    message.channel.send("**celeste commands:**\n\
-      'celeste prefix': gives the bot's prefix\n\
-      \n\
-      **prefix commands:**\n\
-      *utility*\n\
-      'check': responds\n\
-      'ping': gives server + your ping\n\
-      'myid': gives your id number\n\
-      \n\
-      *speech*\n\
-      'say (text)': deletes the command and sends text from bot\n\
-      'thank' or 'thanks': replies\n\
-      'love': deletes the command and sends (<3)\n\
-      \n\
-      *timetable*\n\
-      '(name) + (day)': gives the person's timetable for that day\n\
-      'whatismypurpose': gives the next timetable if available");
+    message.user.send("**celeste commands:**\n\
+    'celeste prefix': gives the bot's prefix\n\
+    \n\
+    **prefix commands:**\n\
+    *utility*\n\
+    'check': responds\n\
+    'ping': gives server + your ping\n\
+    'myid': gives your id number\n\
+    \n\
+    *speech*\n\
+    'say (text)': deletes the command and sends text from bot\n\
+    'thank' or 'thanks': replies\n\
+    'love': deletes the command and sends (<3)\n\
+    \n\
+    *timetable*\n\
+    '(name) + (day)': gives the person's timetable for that day\n\
+    'whatismypurpose': gives the next timetable if available");
   }
   /* utility commands */
   if (command === 'check') {
