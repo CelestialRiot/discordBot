@@ -17,7 +17,8 @@ client.on('guildDelete', guild => {
 client.on('message', async message => {
   if(message.author.bot) return
   const botName = 'celeste';
-  if (message.content === botName + ' prefix') {message.channel.send(config.prefix)}
+  if(message.content === botName + ' prefix') {message.channel.send(config.prefix)}
+  if(message.content === 'whatismypurpose') {message.channel.send}
   if(message.content.indexOf(config.prefix) !== 0) return
 
 // all of users' data
@@ -154,7 +155,7 @@ const usr =
       'love': deletes the command and sends (<3)\n\
       \n\
       *timetable*\n\
-      '(name) + (day)': gives the person's timetable for that dayn\n\
+      '(name) + (day)': gives the person's timetable for that day\n\
       'whatismypurpose': gives the next timetable if available");
   }
   /* utility commands */
@@ -166,8 +167,8 @@ const usr =
       message.channel.send('alive');
     }
   }
-  if(command === 'ping') {
-    const m = await message.user.send('Ping?');
+  if(command === "ping") {
+    const m = await message.user.send("Ping?");
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
   if (command === 'myid') {
@@ -200,6 +201,17 @@ const usr =
     if (exit === false) {
       message.channel.send('you pass butter');
     }
+  }
+  if (command === whatismypurpose) {
+    const d = new Date();
+    var day = d.getDay();
+    var hour = d.getHours() + 11;
+    var offset = d.getTimezoneOffset();
+    message.channel.send(day,hour,offset)
+    if (hour > 23) {
+      hour = 0;
+      day = days + 1;
+    };
   }
 });
 
