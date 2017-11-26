@@ -168,7 +168,7 @@ const usr =
     }
   }
   if(command === "ping") {
-    const m = await message.user.send("Ping?");
+    const m = await message.channel.send("Ping?");
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
   if (command === 'myid') {
@@ -204,14 +204,26 @@ const usr =
   }
   if (command === 'whatismypurpose') {
     const d = new Date();
-    var day = d.getDay();
+    var day = d.getDay()-1;
     var hour = d.getHours() + 11;
-    const offst = d.getTimezoneOffset();
-    message.channel.send(offst)
+    const err = 'you pass butter'
     if (hour > 23) {
-      hour = 0;
-      day = days + 1;
+      hour -= 24;
+      day += 1;
     }
+    if (hour >= 15 && day < 6) {
+      day += 1;
+    }
+    if (hour >= 15 && day === 7) {
+      day = 0;
+    }
+    if (day > days.length) {
+      message.channel.send(err);
+    }
+    else {
+      message.channel.send(err);
+    }
+    console.log(hour+','+day)
   }
 });
 
