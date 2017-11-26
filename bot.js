@@ -223,12 +223,8 @@ const usr =
   if (command === 'whatismypurpose') {
     const d = new Date();
     var day = d.getDay()-1;
-    const hour = d.getHours() + 11;
+    const hour = d.getHours();
     const err = 'you pass butter';
-    if(hour > 23) {hour -= 24;day += 1;}
-    if(hour >= 15) day += 1
-    if(day > 6) day = 0
-    message.channel.send(day+','+hour)
     if(day > days.length || day < days.length) message.channel.send(err)
     else if(usr[indx][1] === id) {
       var txt = usr[indx][2][day];
