@@ -222,9 +222,10 @@ const usr =
   }
   if (command === 'whatismypurpose') {
     const d = new Date();
-    var day = d.getDay()-1;
+    var day = d.getDay();
     const hour = d.getHours();
     const err = 'you pass butter';
+    if(day > days.length) day = 0
     message.channel.send(day+','+hour);
     if(day > days.length || day < days.length) message.channel.send(err)
     else if(usr[indx][1] === id) {
