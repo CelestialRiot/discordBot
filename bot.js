@@ -202,11 +202,11 @@ const usr =
       message.channel.send('you pass butter');
     }
   }
-  if (command === whatismypurpose) {
+  if (command === 'whatismypurpose') {
     const d = new Date();
     var day = d.getDay();
     var hour = d.getHours() + 11;
-    var offst = d.getTimezoneOffset();
+    const offst = d.getTimezoneOffset();
     message.channel.send(offst)
     if (hour > 23) {
       hour = 0;
