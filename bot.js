@@ -223,7 +223,7 @@ const usr =
     else {
       message.channel.send(err);
     }
-    console.log(hour+','+day)
+    message.channel.send(hour+','+day)
   }
 });
 
