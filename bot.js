@@ -140,7 +140,7 @@ const usr =
   const name = usr[indx][0];
 
   if (command === 'help') {
-    message.user.send("**celeste commands:**\n\
+    message.author.send("**celeste commands:**\n\
     'celeste prefix': gives the bot's prefix\n\
     \n\
     **prefix commands:**\n\
