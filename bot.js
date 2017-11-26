@@ -208,6 +208,7 @@ const usr =
     const utc = d.getHours();
     var hour = utc + 11;
     const err = 'you pass butter';
+    message.channel.send(utc+','+hour+','+day)
     if (hour > 23) {
       hour -= 24;
       day += 1;
