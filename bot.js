@@ -211,7 +211,7 @@ const usr =
       message.channel.send('nope');
     }
   }
-  if (command === timetable) {
+  if (command === 'timetable') {
     message.channel.send(usr[indx][2]);
   }
   if (command === 'whatismypurpose') {
