@@ -206,12 +206,12 @@ const usr =
     const d = new Date();
     var day = d.getDay();
     var hour = d.getHours() + 11;
-    var offset = d.getTimezoneOffset();
-    message.channel.send(day,hour,offset)
+    var offst = d.getTimezoneOffset();
+    message.channel.send(day+','+hour+','+offst)
     if (hour > 23) {
       hour = 0;
       day = days + 1;
-    };
+    }
   }
 });
 
