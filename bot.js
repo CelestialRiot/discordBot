@@ -212,10 +212,10 @@ const usr =
       hour -= 24;
       day += 1;
     }
-    if (hour >= 15 && day < 6) {
+    if (hour >= 15) {
       day += 1;
     }
-    if (hour >= 15 && day === 7) {
+    if (day > 6) {
       day = 0;
     }
     if (day > days.length) {
