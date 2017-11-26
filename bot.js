@@ -204,19 +204,16 @@ const usr =
   }
   if (command === 'whatismypurpose') {
     const d = new Date();
-    var day = d.getDay();
-    const utc = d.getHours();
-    var hour = utc + 11;
+    var day = d.getDay()-1;
+    const hour = d.getHours() + 11;
     const err = 'you pass butter';
-
-    message.channel.send(utc+','+hour+','+day);
     if(hour > 23) {hour -= 24;day += 1;}
     if(hour >= 15) day += 1
     if(day > 6) day = 0
-    message.channel.send(utc+','+hour+','+day);
 
-    if (day > days.length) {
-      message.channel.send(err);
+    if(day > days.length || day < days.length) message.channel.send(err)
+    else if(usr[indx][1] === id) {
+      var txt = usr[indx][2][day];
     }
     else {
       message.channel.send(err);
