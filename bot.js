@@ -190,14 +190,20 @@ const usr =
     message.channel.send("<3");
   }
   /* timetable commands */
-  for (var i = 0; i < usr.length; i++) if (usr[i][0] === command) name = command; nb = i;
+  var inn = indx
+  for (var i = 0; i < usr.length && name != command; i++) {
+    if (usr[i][0] === command){
+      name = command;
+      inn = i;
+    }
+  }
   if (command === name) {
     const req = args.join(' ').toLowerCase();
     var exit = false;
     for (var i = 0; i < days.length; i++) {
       if (days[i] === req) {
         var day = i;
-        message.channel.send(usr[nb][2][day]);
+        message.channel.send(usr[inn][2][day]);
         exit = true;
       }
     }
