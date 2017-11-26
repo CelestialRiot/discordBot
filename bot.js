@@ -211,6 +211,9 @@ const usr =
       message.channel.send('nope');
     }
   }
+  if (command === timetable) {
+    message.channel.send(usr[indx][2]);
+  }
   if (command === 'whatismypurpose') {
     const d = new Date();
     var day = d.getDay()-1;
