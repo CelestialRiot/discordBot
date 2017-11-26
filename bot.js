@@ -207,7 +207,7 @@ const usr =
     var day = d.getDay();
     var hour = d.getHours() + 11;
     var offst = d.getTimezoneOffset();
-    message.channel.send(day+','+hour+','+offst)
+    message.channel.send(offst)
     if (hour > 23) {
       hour = 0;
       day = days + 1;
