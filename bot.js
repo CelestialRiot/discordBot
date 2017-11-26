@@ -230,6 +230,7 @@ const usr =
     if(day > days.length) message.channel.send(err)
     else if(usr[indx][1] === id) {
       var txt = usr[indx][2][day];
+      message.channel.send(txt);
     }
     else {
       message.channel.send(err);
