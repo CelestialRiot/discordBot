@@ -205,8 +205,9 @@ const usr =
   if (command === 'whatismypurpose') {
     const d = new Date();
     var day = d.getDay()-1;
-    var hour = d.getHours() + 11;
-    const err = 'you pass butter'
+    const utc = d.getHours();
+    var hour = utc + 11;
+    const err = 'you pass butter';
     if (hour > 23) {
       hour -= 24;
       day += 1;
@@ -223,7 +224,7 @@ const usr =
     else {
       message.channel.send(err);
     }
-    message.channel.send(hour+','+day)
+    message.channel.send(utc+','+hour+','+day)
   }
 });
 
