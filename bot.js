@@ -17,8 +17,7 @@ client.on('guildDelete', guild => {
 client.on('message', async message => {
   if(message.author.bot) return
   const botName = 'celeste';
-  if(message.content === botName + ' prefix') {message.channel.send(config.prefix)}
-  if(message.content === 'whatismypurpose') {message.channel.send}
+  if(message.content === botName) {message.channel.send(config.prefix)}
   if(message.content.indexOf(config.prefix) !== 0) return
 
 // all of users' data
@@ -189,6 +188,13 @@ const usr =
   if (command === 'love') {
     message.delete().catch(O_o=>{});
     message.channel.send("<3");
+  }
+  if (command === 'play') {
+    const text = args.join(' ');
+    if (text === 'my playlist') {
+      message.channel.send('!play https://www.youtube.com/playlist?list=LLcn33uTRP_A5AHD4Zcv2jYQ');
+      message.channel.send('!shuffle');
+    }
   }
   /* timetable commands */
   var inn = indx
