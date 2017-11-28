@@ -189,11 +189,10 @@ const usr =
     message.delete().catch(O_o=>{});
     message.channel.send("<3");
   }
-  if (command === 'play') {
+  if (command === 'my') {
     const text = args.join(' ');
-    if (text === 'my playlist') {
-      message.channel.send('!play https://www.youtube.com/playlist?list=LLcn33uTRP_A5AHD4Zcv2jYQ');
-      message.channel.send('!shuffle');
+    if (text === 'playlist') {
+      message.channel.send('https://www.youtube.com/playlist?list=LLcn33uTRP_A5AHD4Zcv2jYQ');
     }
   }
   /* timetable commands */
