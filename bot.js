@@ -16,7 +16,7 @@ client.on('guildDelete', guild => {
 client.on('voiceStateUpdate', (oldMember, newMember) => {
   let newUserChannel = newMember.voiceChannel;
   let oldUserChannel = oldMember.voiceChannel;
-  var channel = client.channels.get('383144067367829507');
+  var channel = client.channels.get('383144066743009281');
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
     channel.sendMessage(newMember + ' has joined a voice channel');
   } else if(newUserChannel === undefined){
@@ -35,7 +35,7 @@ client.on('message', async message => {
 // user[0][1] gives user 0's id number
 // user[0][2] gives user 0's entire timetable
 // user[0][2][0] gives user 0's monday timetable, from monday[0] to friday[4]
-//0=yehya 1=dorvan 2=anthony 3=bryan 4=george 5=zein 6=jackie 7=peter 8=hassan 9=oliver
+//0=yehya 1=dorvan 2=anthony 3=bryan 4=george 5=zein 6=jackie 7=peter 8=hassan 9=oliver 10=mousa
 const usr =
   [
     /*  YEHYA A. 0 */
