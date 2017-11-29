@@ -14,6 +14,17 @@ client.on('guildDelete', guild => {
   client.user.setGame(`on ${client.guilds.size} servers`);
 });
 
+bot.on('voiceStateUpdate', (oldMember, newMember) => {
+  let newUserChannel = newMember.voiceChannel;
+  let oldUserChannel = oldMember.voiceChannel;
+  if (oldUserChannel === undefined && newUserChannel !== undefined) {
+    bot.channels.get('383144067367829507').sendMessage(newMember + ' has joined');
+  }
+  else if (newUserChannel === undefined){
+    bot.channels.get('383144067367829507').sendMessage(oldMember + ' has left.');
+  }
+}
+
 client.on('message', async message => {
   if(message.author.bot) return
   const botName = 'celeste';
@@ -160,6 +171,11 @@ const usr =
 'whatismypurpose': gives the next timetable if available\
 ");
   }
+
+  if (command === 'channelid') {
+    message.channel.send(channel)
+  }
+
   /* utility commands */
   if (command === 'check') {
     if (name === 'yehya') {
