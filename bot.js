@@ -17,7 +17,6 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   let newUserChannel = newMember.voiceChannel
   let oldUserChannel = oldMember.voiceChannel
   const chan = client.servers.get('Various Stooges', 'general').defaultChannel;
-  newMember.sendMessage(chan + 'k');
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
     client.sendMessage(chan, newMember + ' has joined a voice channel');
   } else if(newUserChannel === undefined){
