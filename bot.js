@@ -15,6 +15,7 @@ client.on('guildDelete', guild => {
 });
 
 bot.on('voiceStateUpdate', (oldMember, newMember) => {
+
   let newUserChannel = newMember.voiceChannel;
   let oldUserChannel = oldMember.voiceChannel;
   if (oldUserChannel === undefined && newUserChannel !== undefined) {
@@ -22,6 +23,9 @@ bot.on('voiceStateUpdate', (oldMember, newMember) => {
   }
   else if (newUserChannel === undefined){
     bot.channels.get('383144067367829507').sendMessage(oldMember + ' has left.');
+  }
+  else {
+    return;
   }
 });
 
