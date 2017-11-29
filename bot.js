@@ -19,10 +19,9 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
     newMember.send(newMember + ' has joined the voice channel');
-    message.guild.channels.find('general', 'Various Stooges').sendMessage(newMember + " has joined.");
   } else if(newUserChannel === undefined){
     oldMember.send(oldMember + ' has left the voice channel');
-    message.guild.channels.find('383144066743009281', '383144067367829507').sendMessage(oldMember + " has left.");
+    message.guild.channels.find('383144066743009281', '383144067367829507').send(oldMember + " has left.");
   }
 });
 client.on('message', async message => {
