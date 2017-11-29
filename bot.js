@@ -129,6 +129,16 @@ const usr =
         'MM1/MM1/ASS/ENG/PHS',
       ],
     ],
+    /*  MOUSA S. 19  */
+    ['mousa','248045916676816906',
+      [
+        'VSC/ENG/REL/REL/CMP',
+        'VSC/VSC/BIO/BIO/GMA',
+        'CMP/CMP/BIO/GMA/VSC',
+        'CMP/REL/ASS/GMA/GMA',
+        'ENG/ENG/ASS/REL/BIO',
+      ],
+    ],
   ];
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
