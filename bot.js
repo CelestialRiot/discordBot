@@ -171,11 +171,7 @@ const usr =
 'whatismypurpose': gives the next timetable if available\
 ");
   }
-
-  if (command === 'channelid') {
-    message.channel.send(channel)
-  }
-
+  
   /* utility commands */
   if (command === 'check') {
     if (name === 'yehya') {
