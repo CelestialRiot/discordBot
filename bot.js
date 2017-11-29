@@ -16,7 +16,7 @@ client.on('guildDelete', guild => {
 client.on('voiceStateUpdate', (oldMember, newMember) => {
   let newUserChannel = newMember.voiceChannel
   let oldUserChannel = oldMember.voiceChannel
-  const chan = client.servers.get('383144067367829507', '383144066743009281').defaultChannel;
+  const chan = client.servers.get('general', 'Various Stooges').defaultChannel;
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
     client.sendMessage(chan, newMember + ' has joined a voice channel');
   } else if(newUserChannel === undefined){
