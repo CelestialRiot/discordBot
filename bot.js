@@ -14,13 +14,12 @@ client.on('guildDelete', guild => {
   client.user.setGame(`on ${client.guilds.size} servers`);
 });
 client.on('voiceStateUpdate', (oldMember, newMember) => {
-  let newUserChannel = newMember.voiceChannel
-  let oldUserChannel = oldMember.voiceChannel
-  const chan = client.servers.get('Various Stooges', 'general').defaultChannel;
+  let newUserChannel = newMember.voiceChannel;
+  let oldUserChannel = oldMember.voiceChannel;
+  const chan = client.servers.get('Various Stooges', 'general');
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
     client.sendMessage(chan, newMember + ' has joined a voice channel');
   } else if(newUserChannel === undefined){
-    oldMember.send(oldMember + ' has left the voice channel');
     client.sendMessage(chan, oldMember + ' has left the voice channel');
   }
 });
