@@ -23,7 +23,7 @@ bot.on('voiceStateUpdate', (oldMember, newMember) => {
   else if (newUserChannel === undefined){
     bot.channels.get('383144067367829507').sendMessage(oldMember + ' has left.');
   }
-}
+});
 
 client.on('message', async message => {
   if(message.author.bot) return
