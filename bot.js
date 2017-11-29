@@ -18,10 +18,11 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   let oldUserChannel = oldMember.voiceChannel
 
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
-    newMember.send('hi');
+    newMember.send(newMember + ' has joined the voice channel');
+    message.channel.send(newMember + ' has joined the voice channel');
     //message.guild.channels.find('383144066743009281', '383144067367829507').sendMessage(newMember + " has joined.");
   } else if(newUserChannel === undefined){
-    oldMember.send('bye');
+    oldMember.send(oldMember + ' has left the voice channel');
     //message.guild.channels.find('383144066743009281', '383144067367829507').sendMessage(oldMember + " has left.");
   }
 });
