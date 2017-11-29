@@ -13,9 +13,7 @@ client.on('guildDelete', guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
   client.user.setGame(`on ${client.guilds.size} servers`);
 });
-bot.login('Mzg0MzAwOTU1OTMzNDc0ODI2.DPwztA.7fzz2H1A6wjWp0Ns1U21U70-FtA');
-
-bot.on('voiceStateUpdate', (oldMember, newMember) => {
+client.on('voiceStateUpdate', (oldMember, newMember) => {
   let newUserChannel = newMember.voiceChannel
   let oldUserChannel = oldMember.voiceChannel
 
