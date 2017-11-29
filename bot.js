@@ -16,12 +16,12 @@ client.on('guildDelete', guild => {
 client.on('voiceStateUpdate', (oldMember, newMember) => {
   let newUserChannel = newMember.voiceChannel
   let oldUserChannel = oldMember.voiceChannel
-
+  const chan = client.servers.get('383144067367829507', '383144066743009281').defaultChannel;
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
-    newMember.send(newMember + ' has joined the voice channel');
+    client.sendMessage(chan, newMember + ' has joined a voice channel');
   } else if(newUserChannel === undefined){
     oldMember.send(oldMember + ' has left the voice channel');
-    message.guild.channels.find('383144066743009281', '383144067367829507').send(oldMember + " has left.");
+    client.sendMessage(chan, oldMember + ' has left the voice channel');
   }
 });
 client.on('message', async message => {
@@ -215,6 +215,10 @@ const usr =
     if (text === 'playlist') {
       message.channel.send('https://www.youtube.com/playlist?list=LLcn33uTRP_A5AHD4Zcv2jYQ');
     }
+  }
+  if (command === 'bless') {
+    message.delete().catch(O_o=>{});
+    message.channel.send('bless you!');
   }
   /* timetable commands */
   var inn = indx
