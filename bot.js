@@ -143,7 +143,7 @@ const usr =
         'VSC/ENG/REL/REL/CMP',
         'VSC/VSC/BIO/BIO/GMA',
         'CMP/CMP/BIO/GMA/VSC',
-        'CMP/REL/ASS/GMA/GMA',
+        'CMP/REL/ENG/GMA/GMA',
         'ENG/ENG/ASS/REL/BIO',
       ],
     ],
