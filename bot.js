@@ -147,6 +147,16 @@ const usr =
         'ENG/ENG/ASS/REL/BIO',
       ],
     ],
+    /*  Jihad J. 20 */
+    ['jj','283140181760933888',
+      [
+        'LIT/REL/ENG/ENG/LGL',
+        'LIT/LIT/BIO/BIO/BSM',
+        'LGL/LGL/BIO/BSM/LIT',
+        'LGL/ENG/REL/BSM/BSM',
+        'REL/REL/ASS/ENG/BIO',
+      ],
+    ],
   ];
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
