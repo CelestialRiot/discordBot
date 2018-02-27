@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require('./package.json');
 client.on('ready', () => {
-  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
+  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
   client.user.setGame(`on ${client.guilds.size} servers`);
 });
 client.on('guildCreate', guild => {
@@ -40,11 +40,11 @@ const usr =
     /*  YEHYA A. 0 */
     ['yehya','364940154927972353',
       [
-        'REL/MM3/ENG/ENG/SPM',
-        'REL/REL/PHS/PHS/CHM',
-        'SPM/SPM/PHS/CHM/REL',
-        'SPM/ENG/MM3/CHM/CHM',
-        'MM3/MM3/ASS/ENG/PHS',
+        'MMS/MMS/ENG/SPM/CHM',
+        'ENG/ENG/CHM/MMS/PHS',
+        'PHS/PHS/SPM/SPM/REL',
+        'CAR/REL/PHS/MMS/MMS',
+        'REL/REL/CHM/CHM/ENG',
       ],
     ],
     /*  DORVAN J. 1 */
@@ -87,14 +87,14 @@ const usr =
         'ENG/ENG/ASS/BSM/PHS',
       ],
     ],
-    /*  ZEIN W. 5 */
-    ['zein','378463394451161090',
+    /*  ZAIN W. 5 Zeinwannous19 ffh47 */
+    ['zain','378463394451161090',
       [
-        'HLT/REL/ENG/ENG/CMP',
-        'HLT/HLT/PHS/PHS/GMA',
-        'CMP/CMP/PHS/GMA/HLT',
-        'CMP/ENG/REL/GMA/GMA',
-        'REL/REL/ASS/ENG/PHS',
+        'REL/REL/ENG/ICT/GMA',
+        'ENG/ENG/GMA/REL/PHS',
+        'PHS/PHS/ICT/REL/HLT',
+        'CAR/HLT/PHS/ICT/ICT',
+        'HLT/HLT/GMA/GMA/ENG',
       ],
     ],
     /*  JACKIE S. 6 */
@@ -110,11 +110,11 @@ const usr =
     /*  PETER M. 7  */
     ['peter','245794606208253952',
       [
-        'VSC/ENG/REL/REL/CMP',
-        'VSC/VSC/PHS/PHS/GMA',
-        'CMP/CMP/PHS/GMA/VSC',
-        'CMP/REL/ENG/GMA/GMA',
-        'ENG/ENG/ASS/REL/PHS',
+        'ENG/ENG/REL/CMP/GMA',
+        'REL/REL/GMA/ENG/PHS',
+        'PHS/PHS/CMP/ENG/VSC',
+        'CAR/VSC/PHS/CMP/CMP',
+        'VSC/VSC/GMA/GMA/REL',
       ],
     ],
     /*  HASSAN M. 8 */
@@ -188,7 +188,7 @@ const usr =
 'whatismypurpose': gives the next timetable if available\
 ");
   }
-  
+
   /* utility commands */
   if (command === 'check') {
     if (name === 'yehya') {
