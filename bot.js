@@ -19,7 +19,8 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   var channel = client.channels.get('385344314362036224');
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
     bot.users.fetch("364940154927972353").then(myUser => {
-      channel.sendMessage(myUser.avatarURL());
+      //channel.sendMessage(myUser.avatarURL());
+      channel.sendMessage('hi');
     });
     //const usr = client.users.get("364940154927972353");
     //channel.sendMessage(usr);
