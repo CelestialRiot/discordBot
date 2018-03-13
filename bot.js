@@ -17,15 +17,12 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   let newUserChannel = newMember.voiceChannel;
   let oldUserChannel = oldMember.voiceChannel;
   var channel = client.channels.get('385344314362036224');
-  //const m = await message.channel.send('Ping');
-  //m.edit('Pong');
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
-    const m = channel.sendMessage(newMember);
-    channel.sendMessage(m);
-    //m.edit(m.replace('@','') + ' has joined a voice channel')
+    const usr = user.get(newMember);
+    channell/sendMessage(usr);
+    //channel.sendMessage((newMember + ' has joined a voice channel'));
   } else if(newUserChannel === undefined){
-    const m = channel.sendMessage(oldMember);
-    channel.sendMessage(m);
+    channel.sendMessage((oldMember + ' has left a voice channel'));
   }
 });
 client.on('message', async message => {
