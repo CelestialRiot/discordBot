@@ -18,9 +18,11 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   let oldUserChannel = oldMember.voiceChannel;
   var channel = client.channels.get('385344314362036224');
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
-    channel.sendMessage((newMember + ' has joined a voice channel').replace('@',''));
+    const m = channel.sendMessage(newMember);
+    m.edit(m.replace('@','') + ' has joined a voice channel')
   } else if(newUserChannel === undefined){
-    channel.sendMessage((oldMember + ' has left a voice channel').replace('@',''));
+    const m = channel.sendMessage(oldMember);
+    m.edit(m.replace('@','') + ' has left a voice channel')
   }
 });
 client.on('message', async message => {
@@ -60,13 +62,17 @@ const usr =
     /*  BRYAN G. 2  */
     ['bryan','360035848902934538',
       [
-        'maybe if you submitted it id know',
+        'maybe if you submit it i could tell you',
       ],
     ],
     /*  GEORGE A. 3 */
     ['george','245588462797848576',
       [
-        'maybe if you submitted it id know',
+        'ENG/ENG/BSM/ICT/GMA',
+        'BSM/BSM/GMA/ENG/PHS',
+        'PHS/PHS/ICT/ENG/REL',
+        'ASS/REL/PHS/ICT/ICT',
+        'REL/REL/GMA/GMA/BSM',
       ],
     ],
     /*  ZAIN W. 4  */
@@ -92,13 +98,13 @@ const usr =
     /*  HASSAN M. 6 */
     ['hassan','358438947032006657',
       [
-        'maybe if you submitted it id know',
+        'maybe if you give it to me first id know',
       ],
     ],
     /*  OLIVER S. 7 */
     ['oliver','311756864897417217',
       [
-        'maybe if you submitted it id know',
+        'should submit it, oli. maybe that way id know',
       ],
     ],
   ];
