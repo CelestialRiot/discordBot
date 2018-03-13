@@ -18,9 +18,9 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   let oldUserChannel = oldMember.voiceChannel;
   var channel = client.channels.get('385344314362036224');
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
-    channel.sendMessage(newMember + ' has joined a voice channel');
+    channel.sendMessage((newMember + ' has joined a voice channel').replace('@',''));
   } else if(newUserChannel === undefined){
-    channel.sendMessage(oldMember + ' has left a voice channel');
+    channel.sendMessage((oldMember + ' has left a voice channel').replace('@',''));
   }
 });
 client.on('message', async message => {
@@ -42,52 +42,34 @@ const usr =
       [
         'MMS/MMS/ENG/SPM/CHM',
         'ENG/ENG/CHM/MMS/PHS',
-        'PHS/PHS/SPM/SPM/REL',
-        'CAR/REL/PHS/MMS/MMS',
+        'PHS/PHS/SPM/MMS/REL',
+        'CAR/REL/PHS/SPM/SPM',
         'REL/REL/CHM/CHM/ENG',
       ],
     ],
-    /*  DORVAN J. 1 */
-    ['dorvan','246558516553187328',
-      [
-        'VSC/ENG/REL/REL/CMP',
-        'VSC/VSC/VET/VET/GMA',
-        'CMP/CMP/VET/GMA/VSC',
-        'CMP/REL/ENG/GMA/GMA',
-        'ENG/ENG/ASS/REL/VET',
-      ],
-    ],
-    /*  ANTHONY G. 2  */
+    /*  ANTHONY G. 1  */
     ['anthony','246547506056527873',
       [
-        'REL/MM3/ENG/ENG/CMP',
-        'REL/REL/PHS/PHS/CHM',
-        'CMP/CMP/PHS/CHM/REL',
-        'CMP/ENG/MM3/CHM/CHM',
-        'MM3/MM3/ASS/ENG/PHS',
+        'MMS/MMS/ENG/ICT/CHM',
+        'ENG/ENG/CHM/MMS/PHS',
+        'PHS/PHS/ICT/MMS/REL',
+        'ASS/REL/PHS/ICT/ICT',
+        'REL/REL/CHM/CHM/ENG',
       ],
     ],
-    /*  BRYAN G. 3  */
+    /*  BRYAN G. 2  */
     ['bryan','360035848902934538',
       [
-        'VSC/REL/ENG/ENG/CMP',
-        'VSC/VSC/PHS/PHS/GMA',
-        'CMP/CMP/PHS/GMA/VSC',
-        'CMP/ENG/REL/GMA/GMA',
-        'REL/REL/ASS/ENG/PHS',
+        'maybe if you submitted it id know',
       ],
     ],
-    /*  GEORGE A. 4 */
+    /*  GEORGE A. 3 */
     ['george','245588462797848576',
       [
-        'REl/ENG/BSM/BSM/CMP',
-        'REL/REL/PHS/PHS/GMA',
-        'CMP/CMP/PHS/GMA/REL',
-        'CMP/BSM/ENG/GMA/GMA',
-        'ENG/ENG/ASS/BSM/PHS',
+        'maybe if you submitted it id know',
       ],
     ],
-    /*  ZAIN W. 5 Zeinwannous19 ffh47 */
+    /*  ZAIN W. 4  */
     ['zain','378463394451161090',
       [
         'REL/REL/ENG/ICT/GMA',
@@ -97,64 +79,26 @@ const usr =
         'HLT/HLT/GMA/GMA/ENG',
       ],
     ],
-    /*  JACKIE S. 6 */
-    ['jackie',['150425470255628289'],
-      [
-        'LIT/MM1/REL/REL/LGL',
-        'LIT/LIT/BIO/BIO/PSY',
-        'LGL/LGL/BIO/PSY/LIT',
-        'LGL/REL/MM1/PSY/PSY',
-        'MM1/MM1/ASS/REL/BIO',
-      ],
-    ],
-    /*  PETER M. 7  */
+    /*  PETER M. 5  */
     ['peter','245794606208253952',
       [
         'ENG/ENG/REL/CMP/GMA',
         'REL/REL/GMA/ENG/PHS',
         'PHS/PHS/CMP/ENG/VSC',
-        'CAR/VSC/PHS/CMP/CMP',
+        'ASS/VSC/PHS/CMP/CMP',
         'VSC/VSC/GMA/GMA/REL',
       ],
     ],
-    /*  HASSAN M. 8 */
+    /*  HASSAN M. 6 */
     ['hassan','358438947032006657',
       [
-        'REL/MM3/ENG/ENG/SPM',
-        'REL/REL/BIO/BIO/CHM',
-        'SPM/SPM/BIO/CHM/REL',
-        'SPM/ENG/MM3/CHM/CHM',
-        'MM3/MM3/ASS/ENG/BIO',
+        'maybe if you submitted it id know',
       ],
     ],
-    /*  OLIVER S. 9 */
+    /*  OLIVER S. 7 */
     ['oliver','311756864897417217',
       [
-        'LIT/MM1/ENG/ENG/REL',
-        'LIT/LIT/PHS/PHS/BSM',
-        'REL/REL/PHS/BSM/LIT',
-        'REL/ENG/MM1/BSM/BSM',
-        'MM1/MM1/ASS/ENG/PHS',
-      ],
-    ],
-    /*  MOUSA S. 19  */
-    ['mousa','248045916676816906',
-      [
-        'VSC/ENG/REL/REL/CMP',
-        'VSC/VSC/BIO/BIO/GMA',
-        'CMP/CMP/BIO/GMA/VSC',
-        'CMP/REL/ENG/GMA/GMA',
-        'ENG/ENG/ASS/REL/BIO',
-      ],
-    ],
-    /*  Jihad J. 20 */
-    ['jj','283140181760933888',
-      [
-        'LIT/REL/ENG/ENG/LGL',
-        'LIT/LIT/BIO/BIO/BSM',
-        'LGL/LGL/BIO/BSM/LIT',
-        'LGL/ENG/REL/BSM/BSM',
-        'REL/REL/ASS/ENG/BIO',
+        'maybe if you submitted it id know',
       ],
     ],
   ];
@@ -192,14 +136,14 @@ const usr =
   /* utility commands */
   if (command === 'check') {
     if (name === 'yehya') {
-      message.channel.send('alive, thanks to you, father');
+      message.channel.send('Alive. Thanks to you, Father.');
     }
     else {
       message.channel.send('alive');
     }
   }
-  if(command === "ping") {
-    const m = await message.channel.send("Ping?");
+  if(command === 'ping') {
+    const m = await message.channel.send('Ping?');
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
   if (command === 'myid') {
