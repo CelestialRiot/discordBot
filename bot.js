@@ -18,7 +18,7 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   let oldUserChannel = oldMember.voiceChannel;
   var channel = client.channels.get('385344314362036224');
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
-    const usr = client.fetchUser(364940154927972353));
+    const usr = client.fetchUser(364940154927972353);
     channel.sendMessage(usr);
     //channel.sendMessage((newMember + ' string').replace(' string','').replace('@','').replace('<','').replace('>',''));
     //channel.sendMessage((newMem ber + ' has joined a voice channel'));
