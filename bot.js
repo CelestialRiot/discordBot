@@ -40,11 +40,11 @@ const usr =
     /*  YEHYA A. 0 */
     ['yehya','364940154927972353',
       [
-        'MMS/MMS/ENG/SPM/CHM',
-        'ENG/ENG/CHM/MMS/PHS',
-        'PHS/PHS/SPM/MMS/REL',
-        'CAR/REL/PHS/SPM/SPM',
-        'REL/REL/CHM/CHM/ENG',
+        'test/MMS/ENG/SPM/CHM',
+        'ENG/ENG/CHM/ENG/ENG',
+        'PHS/PHS//VCD/VCD',
+        'CAR/ENG/ENG/PHS/PHS',
+        'SPM/SPM/CHM/CHM/VCD',
       ],
     ],
     /*  ANTHONY G. 1  */
