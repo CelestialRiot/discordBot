@@ -105,6 +105,17 @@ const usr =
         'should submit it, oli. maybe that way id know',
       ],
     ],
+    t
+    /*  Jackie S. 8  */
+    ['jackie','150425470255628289',
+      [
+        'SEL/VAP/AGS/CHM',
+        'ENG/GMA/VAP/AGS',
+        'ENG/VAP/GMA/BIO',
+        'BIO/AGS/CHM/LIT',
+        'GMA/ENG/BIO/CHM',
+      ],
+    ],
   ];
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
