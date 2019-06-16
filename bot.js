@@ -50,47 +50,31 @@ const usr =
     /*  ANTHONY G. 1  */
     ['anthony','246547506056527873',
       [
-        'MMS/MMS/ENG/ICT/CHM',
-        'ENG/ENG/CHM/MMS/PHS',
-        'PHS/PHS/ICT/MMS/REL',
-        'ASS/REL/PHS/ICT/ICT',
-        'REL/REL/CHM/CHM/ENG',
+        'maybe if you submit, anthony, I could tell you',
       ],
     ],
     /*  BRYAN G. 2  */
     ['bryan','360035848902934538',
       [
-        'maybe if you submit it i could tell you',
+        'im not telling you until you tell me bryan',
       ],
     ],
     /*  GEORGE A. 3 */
     ['george','245588462797848576',
       [
-        'ENG/ENG/BSM/ICT/GMA',
-        'BSM/BSM/GMA/ENG/PHS',
-        'PHS/PHS/ICT/ENG/REL',
-        'ASS/REL/PHS/ICT/ICT',
-        'REL/REL/GMA/GMA/BSM',
+        'maybe if you submit it i could tell you',
       ],
     ],
     /*  ZAIN W. 4  */
     ['zain','378463394451161090',
       [
-        'REL/REL/ENG/ICT/GMA',
-        'ENG/ENG/GMA/REL/PHS',
-        'PHS/PHS/ICT/REL/HLT',
-        'CAR/HLT/PHS/ICT/ICT',
-        'HLT/HLT/GMA/GMA/ENG',
+        'maybe if you submit it i could tell you',
       ],
     ],
     /*  PETER M. 5  */
     ['peter','245794606208253952',
       [
-        'ENG/ENG/REL/CMP/GMA',
-        'REL/REL/GMA/ENG/PHS',
-        'PHS/PHS/CMP/ENG/VSC',
-        'ASS/VSC/PHS/CMP/CMP',
-        'VSC/VSC/GMA/GMA/REL',
+        'maybe if you submit it i could tell you',
       ],
     ],
     /*  HASSAN M. 6 */
